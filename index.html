@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>6조 JS Project</title>
   <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="CSS/media.css">
   <style>
     .show {
       display: block;
@@ -17,23 +18,51 @@
   </style>
 </head>
 <body>
-  <!-- Head -->
-  <div class="main_top">
-    <div id="home_title" onclick="main_page()">Home</div> 
-    <nav>
-      <div class="nav_bar">menu1</div>
-      <div class="nav_bar">menu2</div>
-      <div class="nav_bar">menu3</div>
-      <div class="nav_bar">menu4</div>
-    </nav>
-  </div>
+  <header>
+    <!-- Head -->
+    <div class="main_top" style="display: flex !important;">
+      <div id="home_title" onclick="defaultDisplay()"><h1>Home</h1></div> 
+      <nav>
+        <div class="nav_bar"><h1>menu1</h1></div>
+        <div class="nav_bar"><h1>menu2</h1></div>
+        <div class="nav_bar"><h1>menu3</h1></div>
+        <div class="nav_bar"><h1>menu4</h1></div>
+      </nav>
+    </div>
+  </header>
+  <section>
+    <!-- Section -->
+    <div id="board" class="hide">
+      <div class="board_list">
+        <div class="top">
+          <div class="num">번호</div>
+          <div class="title">제목</div>
+          <div class="writer">글쓴이</div>
+          <div class="date">작성일</div>
+          <div class="count">조회</div>
+        </div>
+      </div>
+    </div>
+  </section>  
+
   
 
-  <!-- Section -->
+
   <script>
-    function main_page(){
-      // main 으로 이동하는 함수
+    $board = document.querySelector("#board");
+    
+    // 메인 화면 표시
+    function defaultDisplay() {
+      console.log("success");
+      $board.className = 'show';
+      // $cdialog.className = 'hide';
+      // $mdialog.className = 'hide';
+      // $ddialog.className = 'hide';
+      // $boardContent.className = 'hide';
     }
+    
+    
+
   </script>
 </body>
 </html>

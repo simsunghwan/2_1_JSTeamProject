@@ -1,7 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  
+}
+
+.main_top {
+  display: flex !important;
+  /* flex-direction: column; 세로로 정렬 */
+  width: 100vw; /* 최대 길이 */
+  justify-content: space-between;
+}
+
 #home_title,
 .nav_bar {
   width: 150px;
-  height: 100px;
+  height: 50px;
   border: 1px solid red;
   float: left;
   text-align: center;
