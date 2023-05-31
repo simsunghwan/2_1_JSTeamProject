@@ -4,6 +4,14 @@
   
 }
 
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
 .main_top {
   display: flex !important;
   /* flex-direction: column; 세로로 정렬 */
@@ -29,4 +37,32 @@
 #home_title:hover,
 .nav_bar:hover{
   background: #fff;
+}
+
+.login_form {
+  width: 15rem;
+  display: flex; 
+  flex-direction: column;
+  float: right;
+  border: solid 1px red;
+}
+
+.login_form > .btn{
+  display: flex;
+  margin-left: 15%;
+  margin-right: 15%;
+  justify-content: space-between;
+}
+
+#loginBtn{
+  width: 3rem;
+}
+
+#signUpBtn{
+  width: 5rem;
+}
+
+#input_login,
+#input_pw{
+  margin-left: 15%;
 }
