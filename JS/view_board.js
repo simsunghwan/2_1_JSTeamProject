@@ -71,6 +71,7 @@ function viewContent(e) {
 
     const $divTop = document.createElement('div');
     const $divBox = document.createElement('div');
+    $divBox.className = 'container';
 
     const divNum = document.createElement('div');
     divNum.className = 'num';
@@ -94,8 +95,10 @@ function viewContent(e) {
     divCount.innerText = `${json.hit}`;
 
     const $divConText = document.createElement('div');
-    $divConText.className = 'conText';
-    $divConText.innerText = "내용";
+    $divConText.className = 'vText';
+    const $h3TextContainer =  document.createElement('h3');
+    $h3TextContainer.className = 'vText-container';
+    $h3TextContainer.innerText = "내용";
 
     const $divContent = document.createElement('div');
     $divContent.className = 'vContent';
@@ -103,6 +106,7 @@ function viewContent(e) {
     
     $divTop.append(divNum, divTitle, divWriter, divDate, divCount);
     $divBox.append($divConText,$divContent);
+    $divConText.appendChild($h3TextContainer);
     $boardList.append($divTop, $divBox);       
   })
 }
