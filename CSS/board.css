@@ -6,14 +6,46 @@
 }
 
 .board_list {
+  width: 100%;
   border: 2px solid black;
 }
 
 .board_list>.div {
   border-bottom: 1px solid black;
+  font-size: 0;
 }
 
-.board_list>div.top>div{
+.board_list>div.board_top{
+  border-bottom: 1px solid #999;
+}
+
+.board_list>div:last-child {
+  border-bottom: 1px solid #000;
+}
+
+.conText,
+.vContent{
+  display: block !important;
+  border: 1px solid black;
+  float: left;
+}
+
+.conText{
+  width: 20%;
+}
+
+.vContent{
+  width: 79%;
+}
+
+.board_list>div>div{
+  display: inline-block;
+  padding: 15px 0;
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+.board_list>div.board_top>div{
   font-weight: 600;
 }
 
@@ -24,12 +56,15 @@
   width: 10%;
 }
 
-.board_list .top .title {
+.board_list .title{
   width: 60%;
+}
+
+.board_list .board_top .title {
   text-align: center;
 }
 
-.board_list .top {
+.board_list .board_top {
   display: flex;
   flex-direction: row;
   background: yellow;

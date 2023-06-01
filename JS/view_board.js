@@ -15,7 +15,7 @@ const getPosts = (e) => {
         console.log(boardData);
 
         $boardList.innerHTML = '';
-        $boardList.appendChild($top);
+        $boardList.appendChild($boardTop);
 
         boardData.forEach((v, i) => {
           const $divRow = document.createElement('div');
@@ -57,3 +57,52 @@ const getPosts = (e) => {
       }
     );
 };
+
+// 게시판 title 클릭 시 내용 보여주기
+function viewContent(e) {
+  vBoard();
+
+  fetch('http://localhost:3000/posts/' + e.target.parentNode.id)
+  .then ((response) => response.json())
+  .then ((json) => {
+    console.log(json);
+    $boardList.innerHTML = '';
+    $boardList.appendChild($boardTop);
+
+    const $divTop = document.createElement('div');
+    const $divBox = document.createElement('div');
+
+    const divNum = document.createElement('div');
+    divNum.className = 'num';
+    divNum.textContent = `${json.id}`;
+    
+    const divTitle = document.createElement('div');
+    divTitle.className = 'title';
+    divTitle.id = `${json.id}`;
+    divTitle.innerHTML = `<h3>${json.title}</h3>`;
+
+    const divWriter = document.createElement('div');
+    divWriter.className = 'writer';
+    divWriter.textContent = `${json.writer}`;
+
+    const divDate = document.createElement('div');
+    divDate.className = 'date';
+    divDate.textContent = `${json.createdAt}`;
+
+    const divCount = document.createElement('div');
+    divCount.className = 'count';
+    divCount.innerText = `${json.hit}`;
+
+    const $divConText = document.createElement('div');
+    $divConText.className = 'conText';
+    $divConText.innerText = "내용";
+
+    const $divContent = document.createElement('div');
+    $divContent.className = 'vContent';
+    $divContent.textContent = `${json.content}`;
+    
+    $divTop.append(divNum, divTitle, divWriter, divDate, divCount);
+    $divBox.append($divConText,$divContent);
+    $boardList.append($divTop, $divBox);       
+  })
+}
