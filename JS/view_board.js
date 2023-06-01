@@ -1,16 +1,15 @@
 // 게시판 조회 했을 때의 동작 구현 파일입니다.
 const getPosts = (e) => {
-  if (e) e.preventDefault();
-  else {
-    defaultDisplay();
-  }
+  vBoard();
 
   fetch('http://localhost:3000/posts') // method 를 get 방법으로 호출함
-    .then((response) => response.json()) // 정상적으로 데이터를 받아 왔을 때
+    .then((response) => {
+      console.log(response.status);
+      return response.json()}) // 정상적으로 데이터를 받아 왔을 때
     // response.json() => 받아온 데이터를 json 형태로 변환해줌
     .then( // 작동 하는 알고리즘
-      (data) => {
-        //console.log(data);
+      (data) => { 
+        console.log(data);
         boardData = Array.from(data);
         boardData.sort((a, b) => b.id - a.id);
         console.log(boardData);
@@ -52,9 +51,9 @@ const getPosts = (e) => {
               e.preventDefault();
               console.log(e.target.parentNode.id);
               viewContent(e);
-    }
-  });
-});
+            }
+          });
+        });
       }
     );
 };

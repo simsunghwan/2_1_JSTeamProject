@@ -8,15 +8,17 @@ h4 {
 }
 
 .show {
-  display: block;
+  display: block !important;
 }
 
 .hide {
-  display: none;
+  display: none !important;
 }
+
 body {
-  /* overflow-x: hidden; */
+  user-select: none;
 }
+
 
 .main_top {
   display: flex !important;
