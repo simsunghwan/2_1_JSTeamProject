@@ -30,20 +30,21 @@
 /* 내용 부분 */
 .container {
   display: flex;
-  align-items: stretch; 
+  /* align-items: stretch;  */
 }
 
 .vText {
+  display: flex !important; /* display 가 block 일 경우 align-items 와 justify-content가 먹히지 않음*/
   flex: 2;
+  align-items: center;
   justify-content: center;
 }
 
-.vText-container {
+/* .vText-container {
   text-align: center;
-  /* width: max-content; */
+  /* width: max-content; 
   height: max-content;
-
-}
+} */
 
 .vContent{
   flex: 8;  /* flex */

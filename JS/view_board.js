@@ -96,9 +96,10 @@ function viewContent(e) {
 
     const $divConText = document.createElement('div');
     $divConText.className = 'vText';
-    const $h3TextContainer =  document.createElement('h3');
-    $h3TextContainer.className = 'vText-container';
-    $h3TextContainer.innerText = "내용";
+    $divConText.innerText = "내용";
+    // const $h3TextContainer =  document.createElement('h3');
+    // $h3TextContainer.className = 'vText-container';
+    // $h3TextContainer.innerText = "내용";
 
     const $divContent = document.createElement('div');
     $divContent.className = 'vContent';
@@ -106,7 +107,7 @@ function viewContent(e) {
     
     $divTop.append(divNum, divTitle, divWriter, divDate, divCount);
     $divBox.append($divConText,$divContent);
-    $divConText.appendChild($h3TextContainer);
+    // $divConText.appendChild($h3TextContainer);
     $boardList.append($divTop, $divBox);       
   })
 }
