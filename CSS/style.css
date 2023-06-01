@@ -1,7 +1,10 @@
+@import url(board.css);
 * {
   margin: 0;
   padding: 0;
-  
+}
+h4 {
+  user-select: none;
 }
 
 .show {
@@ -11,14 +14,18 @@
 .hide {
   display: none;
 }
+body {
+  /* overflow-x: hidden; */
+}
 
 .main_top {
   display: flex !important;
   /* flex-direction: column; 세로로 정렬 */
-  width: 100vw; /* 최대 길이 */
+  width: 100%; /* 최대 길이 */
   justify-content: space-between;
 }
 
+/* home title 에 대한 css */
 #home_title,
 .nav_bar {
   width: 150px;
@@ -27,16 +34,20 @@
   float: left;
   text-align: center;
   background: #999;
-}
-
-#home_title {
-  margin-left: 5px;
-  margin-right: 200px;
+  cursor: pointer;    /* div tag에 마우스를 올리면 손모양으로 마우스포인터가 바뀜 */
+  user-select: none;  /* div tag 내 text 를 클릭해도 마우스 프롬프트가 생기지 않음 */
 }
 
 #home_title:hover,
 .nav_bar:hover{
   background: #fff;
+}
+
+/* login form 에 대한 css */
+loginSection {
+  display: block;
+  width: 100%;
+  height: 90px;
 }
 
 .login_form {
@@ -65,4 +76,10 @@
 #input_login,
 #input_pw{
   margin-left: 15%;
+}
+
+/* Section */
+section {
+  width: 100%;
+  height: 100rem;
 }

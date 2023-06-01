@@ -1,0 +1,36 @@
+/* board_css */
+
+#board {
+  display: block;
+  /* background: yellow; */
+}
+
+.board_list {
+  border: 2px solid black;
+}
+
+.board_list>.div {
+  border-bottom: 1px solid black;
+}
+
+.board_list>div.top>div{
+  font-weight: 600;
+}
+
+.board_list .num ,
+.board_list .writer,
+.board_list .date,
+.board_list .count{
+  width: 10%;
+}
+
+.board_list .top .title {
+  width: 60%;
+  text-align: center;
+}
+
+.board_list .top {
+  display: flex;
+  flex-direction: row;
+  background: yellow;
+}
