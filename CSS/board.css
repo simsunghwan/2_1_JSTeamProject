@@ -7,11 +7,10 @@
 
 .board_list {
   width: 100%;
-  border: 2px solid black;
+  border-top: 1px solid black;
 }
 
 .board_list>.div {
-  border-bottom: 1px solid black;
   font-size: 0;
 }
 
@@ -23,19 +22,35 @@
   border-bottom: 1px solid #000;
 }
 
-.conText,
+.vText,
 .vContent{
-  display: block !important;
   border: 1px solid black;
-  float: left;
 }
 
-.conText{
-  width: 20%;
+/* 내용 부분 */
+.container {
+  display: flex;
+  /* align-items: stretch;  */
 }
+
+.vText {
+  display: flex !important; /* display 가 block 일 경우 align-items 와 justify-content가 먹히지 않음*/
+  flex: 2;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .vText-container {
+  text-align: center;
+  /* width: max-content; 
+  height: max-content;
+} */
 
 .vContent{
-  width: 79%;
+  flex: 8;  /* flex */
+  word-break: break-all;  /* 내용 word 가 박스 width 사이즈를 벗어나지 않도록 제한 후 줄바꿈 */
+  text-align: left !important;
+  font-size: 20pt;
 }
 
 .board_list>div>div{
@@ -68,4 +83,18 @@
   display: flex;
   flex-direction: row;
   background: yellow;
+}
+
+/* button css */
+#board_button{
+  display: flex !important;
+  flex-direction: row;
+  justify-content: right;
+}
+
+#board_button > button {
+  width: 80px;
+  padding: 10px;
+  margin-top: 10px;
+  margin-right: 10px;
 }

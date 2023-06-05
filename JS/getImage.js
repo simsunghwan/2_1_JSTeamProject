@@ -8,12 +8,12 @@ fetch("http://localhost:3000/profile")
     let upLoadPhoto=0;
     for(const profile of json) {
         
-    const imageTag = `<img alt="non" src="${profile.picture}">`;
+    const imageTag = `<img alt="non" src="${profile.imgUrl}">`;
     // url image 로딩 방식과 base64 이미지 로딩 방식 모두 구현
-    const isImageLoaded = profile.picture && (profile.picture.startsWith('http') || profile.picture.startsWith('data:image')); // 이미지 로딩 여부를 체크하는 조건 추가
+    const isImageLoaded = profile.imgUrl && (profile.imgUrl.startsWith('http') || profile.imgUrl.startsWith('data:image')); // 이미지 로딩 여부를 체크하는 조건 추가
 
     if (!isImageLoaded) {
-        upLoadpicture+=1;
+        upLoadimgUrl+=1;
         continue; // 이미지가 로딩되지 않은 경우, 현재 고객을 건너뜁니다.
     }
         h.push(`<div class="slide-box">`);
@@ -21,7 +21,7 @@ fetch("http://localhost:3000/profile")
         h.push(`<tbody>`);
 
         h.push(`<tr>`);
-        h.push(`<td rowspan="5"><img alt="non" src="${profile.picture}"></td>`);
+        h.push(`<td rowspan="5"><img alt="non" src="${profile.imgUrl}"></td>`);
         h.push(`<td>이름 :</td><td>${profile.name}</td>`);
         h.push(`</tr>`);
 

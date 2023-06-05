@@ -1,0 +1,115 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "writer": "typicode",
+      "content": "test content",
+      "createAt": "2021.1.15",
+      "hit": 1
+    },
+    {
+      "id": 2,
+      "title": "json-server2",
+      "writer": "typicode",
+      "content": "test content2",
+      "createAt": "2021.1.16",
+      "hit": 2
+    },
+    {
+      "title": "test",
+      "writer": "daehan",
+      "content": "1234",
+      "createdAt": "2023.05.27",
+      "hit": 0,
+      "id": 3
+    },
+    {
+      "title": "test",
+      "writer": "daehan",
+      "content": "1234qwerasdfweqrsdfqwerasdfwqrrrrrrqwefdsaweqqrewafssfewqrqwdfasderqwfdaqwrewqfsadfweqrasdfzxcvqfqwerfzcxvzxcvadfwerqsdfxzcvasdrfweqrfgdszvxcvawerasdfwerqsdf",
+      "createdAt": "2023.06.01",
+      "hit": 4,
+      "id": 4
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "writer": "test",
+      "postId": 1
+    }
+  ],
+  "profile": [
+    { 
+      "id": 1,
+      "name": "심성환",
+      "class": "JI-A",
+      "age": 25,
+      "level": "N2",
+      "minded":"달이 아름다워요",
+      "imgUrl": "https://th.bing.com/th/id/OIP.CyMk3lQtjBETrjZ-iFUIgQHaGl?w=212&h=187&c=7&r=0&o=5&pid=1.7"
+      
+    },
+    { 
+      "id": 2,
+      "name": "김민재",
+      "class": "JI-A",
+      "age": 28,
+      "level": "N3",
+      "minded":"이오리 모에",
+      "imgUrl": "https://th.bing.com/th/id/OIP.8j8ftDg-bE1pSpNbC2SQvAHaJ4?w=204&h=272&c=7&r=0&o=5&pid=1.7"
+      
+    },
+    {
+      "id": 3,
+      "name": "정훈희",
+      "class": "JI-B",
+      "age": 19,
+      "level": "N1",
+      "minded":"일본어 실력 늘리겠습니다",
+      "imgUrl": "https://th.bing.com/th/id/OIP.YJ_6oXM06VsLgbBi2p6uVAHaD8?w=322&h=180&c=7&r=0&o=5&pid=1.7"
+    },
+    {
+      "id": 4,
+      "name": "유대한",
+      "class": "JI-A",
+      "age": 23,
+      "level": "N4",
+      "minded":"인생 실력 늘리겠습니다",
+      "imgUrl": "https://th.bing.com/th/id/OIP.VBtxFSkTAkV0d-q9hKo3vAAAAA?w=187&h=187&c=7&r=0&o=5&pid=1.7"
+    },
+    {
+      "id": 5,
+      "name": "권지훈",
+      "class": "JI-B",
+      "age": 29,
+      "level": "N2",
+      "minded":"놀다오겠습니다",
+      "imgUrl": "https://th.bing.com/th/id/OIP.cnA1MsoFRrDtTE9KXoNGZwAAAA?w=198&h=180&c=7&r=0&o=5&pid=1.7"
+      
+    },
+    {
+      "id": 6,
+      "name": "리효빈",
+      "class": "JI-A",
+      "age": 26,
+      "level": "N2",
+      "minded":"일본여자친구 사귀겠습니다",
+      "imgUrl": "https://th.bing.com/th/id/OIP.B0xCvAP7BwNBXDizZQ8AngHaDh?w=310&h=166&c=7&r=0&o=5&pid=1.7"
+      
+    }
+  ],
+  "users":[
+    {
+      "id": 1,
+      "name": "유대한",
+      "userId": 1234,
+      "userPW": 1234,
+      "nickName": "대한대한아",
+      "birth": "2000-??-??",
+      "phone": "010-1111-1111"
+    }
+  ]
+}

@@ -27,7 +27,7 @@ const getPosts = (e) => {
           const $divTitle = document.createElement('div');
           $divTitle.className = 'title';
           $divTitle.id = `${v.id}`;
-          $divTitle.innerHTML = `<a href="" class="boardTitle")">${v.title}</a>`;
+          $divTitle.innerHTML = `<a href="" class="boardTitle">${v.title}</a>`;
 
           const $divWriter = document.createElement('div');
           $divWriter.className = 'writer';
@@ -44,6 +44,7 @@ const getPosts = (e) => {
           $divRow.append($divNum, $divTitle, $divWriter, $divDate, $divCount);
           $boardList.appendChild($divRow);
         });
+
         const $clickTitles = document.querySelectorAll('.title');
         $clickTitles.forEach(function(title){
           title.addEventListener('click', function(e){
@@ -54,6 +55,18 @@ const getPosts = (e) => {
             }
           });
         });
+
+        /* 버튼 div */
+        const $divButton = document.createElement('div');
+        $divButton.className = "board_button";
+
+        /* create_button */
+        const $btnCreateBoard = document.createElement('button');
+        $btnCreateBoard.id = "create_board";
+        $btnCreateBoard.textContent = "작성";
+
+        /*  버튼 div에 버튼 추가 */
+        $divButton.append($btnCreateBoard);
       }
     );
 };
@@ -71,6 +84,7 @@ function viewContent(e) {
 
     const $divTop = document.createElement('div');
     const $divBox = document.createElement('div');
+    $divBox.className = 'container';
 
     const divNum = document.createElement('div');
     divNum.className = 'num';
@@ -94,8 +108,11 @@ function viewContent(e) {
     divCount.innerText = `${json.hit}`;
 
     const $divConText = document.createElement('div');
-    $divConText.className = 'conText';
+    $divConText.className = 'vText';
     $divConText.innerText = "내용";
+    // const $h3TextContainer =  document.createElement('h3');
+    // $h3TextContainer.className = 'vText-container';
+    // $h3TextContainer.innerText = "내용";
 
     const $divContent = document.createElement('div');
     $divContent.className = 'vContent';
@@ -103,6 +120,7 @@ function viewContent(e) {
     
     $divTop.append(divNum, divTitle, divWriter, divDate, divCount);
     $divBox.append($divConText,$divContent);
+    // $divConText.appendChild($h3TextContainer);
     $boardList.append($divTop, $divBox);       
   })
 }
