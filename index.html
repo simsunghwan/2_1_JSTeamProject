@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="CSS/media.css">
   <script src="JS/change_menu.js"></script>
   <script src="JS/view_board.js"></script>
+  <script src="JS/create_board.js"></script>
 </head>
 <body>
   <header>
@@ -57,12 +58,26 @@
       </div>
     </div>
   </section>  
-
+  <footer>
+    <div id="board_btn" class="hide">
+      <button id="create_board" class="hide">작성</button>
+      <!-- 삭제와 수정은 로그인 회원과 일치 할 때만 보이기
+      <button id="modify_board" class="show">수정</button>
+      <button id="delete_board" class="show">삭제</button>  -->
+    </div>
+  </footer>
   <script>
-    $board      = document.querySelector("#board");
-    $login      = document.querySelector("#login");
-    $boardList  = document.querySelector(".board_list");
-    $boardTop   = document.querySelector(".board_top");
+    const $board      = document.querySelector("#board");
+    const $login      = document.querySelector("#login");
+    const $boardList  = document.querySelector(".board_list");
+    const $boardTop   = document.querySelector(".board_top");
+
+    // 게시판 버튼 선택자 (작성, 수정, 삭제)
+    const $board_btn  = document.querySelector('.board_button');
+    const $create_board = document.querySelector("#create_board");
+    
+
+    $create_board.addEventListener('submit', postData);
   </script>
 </body>
 </html>

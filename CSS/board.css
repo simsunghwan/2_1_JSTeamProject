@@ -84,3 +84,17 @@
   flex-direction: row;
   background: yellow;
 }
+
+/* button css */
+#board_button{
+  display: flex !important;
+  flex-direction: row;
+  justify-content: right;
+}
+
+#board_button > button {
+  width: 80px;
+  padding: 10px;
+  margin-top: 10px;
+  margin-right: 10px;
+}
