@@ -41,7 +41,22 @@
       "postId": 1
     }
   ],
-  "profile": {
-    "name": "typicode"
-  }
+  "profile": [
+    {
+    "id": 1, 
+    "name": "심성환",
+    "imgUrl": "~~~~~~"
+    }
+  ],
+  "users":[
+    {
+      "id": 1,
+      "name": "유대한",
+      "userId": 1234,
+      "userPW": 1234,
+      "nickName": "대한대한아",
+      "birth": "2000-??-??",
+      "phone": "010-1111-1111"
+    }
+  ]
 }
