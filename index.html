@@ -9,11 +9,12 @@
   <link rel="stylesheet" href="CSS/media.css">
   <script src="JS/change_menu.js"></script>
   <script src="JS/view_board.js"></script>
+  <script src="JS/input_user.js"></script>
 </head>
 <body>
   <header>
     <!-- Head -->
-    <div class="main_top" style="display: flex !important;"> <!-- display : flex 가 어떤 뜻이야?  -->
+    <div class="main_top" style="display: flex !important;"> <!-- display : flex 가 어떤 뜻이야?몰라  -->
       <div id="home_title" onclick="defaultDisplay()"><h1>Home</h1></div> 
       <nav>
         <div class="nav_bar" onclick="defaultDisplay()"><h1>조원 소개</h1></div>
@@ -30,7 +31,7 @@
           </div>
           <div class="btn">
             <button id="loginBtn">login</button>
-            <button id="signUpBtn">sign Up</button>
+            <button onclick="input_user_page()" id="signUpBtn">sign Up</button>
           </div>
         </form>
       </div>
@@ -38,25 +39,7 @@
   </header>
   <!-- Section -->
   <!-- 메뉴를 눌렀을 때 새로고침 되지 않고 작동해야합니다. -->
-<<<<<<< HEAD
-  <loginSection>
-    <div id="login" class="show">
-      <div class="login_form">
-        <div>
-          <h4>Login</h4>
-          <input type="text" name="user_name" id="input_login">
-          <input type="password" name="password" id="input_pw">
-        </div>
-        <div class="btn">
-          <button id="loginBtn">login</button>
-          <button id="signUpBtn">sign Up</button>
-        </div>
-      </div>
-    </div>
-  </loginSection>
-=======
   
->>>>>>> 2643b9b7418310cd4049b846ba341b49cc7aaeef
   <section>
     <!-- 게시판 -->
     <div id="board" class="hide">
@@ -77,10 +60,13 @@
   </section>  
 
   <script>
-    $board      = document.querySelector("#board");
-    $login      = document.querySelector("#login");
-    $boardList  = document.querySelector(".board_list");
-    $boardTop   = document.querySelector(".board_top");
+    const $board      = document.querySelector("#board");
+    const $login      = document.querySelector("#login");
+    const $boardList  = document.querySelector(".board_list");
+    const $boardTop   = document.querySelector(".board_top");
+    
+  
+
 
   </script>
 </body>
