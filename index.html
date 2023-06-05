@@ -21,25 +21,24 @@
         <div class="nav_bar" onclick="getPosts()"><h1>게시판</h1></div>
         <div class="nav_bar"><h1>준비중....</h1></div>
       </nav>
+      <div id="login" class="show">
+        <form action="#" class="login_form">
+          <div>
+            <h4>Login</h4>
+            <input type="text" name="user_name" id="input_login">
+            <input type="password" name="password" id="input_pw">
+          </div>
+          <div class="btn">
+            <button id="loginBtn">login</button>
+            <button id="signUpBtn">sign Up</button>
+          </div>
+        </form>
+      </div>
     </div>
   </header>
   <!-- Section -->
   <!-- 메뉴를 눌렀을 때 새로고침 되지 않고 작동해야합니다. -->
-  <loginSection>
-    <div id="login" class="show">
-      <form action="#" class="login_form">
-        <div>
-          <h4>Login</h4>
-          <input type="text" name="user_name" id="input_login">
-          <input type="password" name="password" id="input_pw">
-        </div>
-        <div class="btn">
-          <button id="loginBtn">login</button>
-          <button id="signUpBtn">sign Up</button>
-        </div>
-      </form>
-    </div>
-  </loginSection>
+  
   <section>
     <!-- 게시판 -->
     <div id="board" class="hide">
