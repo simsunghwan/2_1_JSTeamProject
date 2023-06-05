@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>6조 JS Project</title>
-  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="CSS/style.css">np
   <link rel="stylesheet" href="CSS/media.css">
   <script src="JS/change_menu.js"></script>
   <script src="JS/view_board.js"></script>
@@ -27,7 +27,7 @@
   <!-- 메뉴를 눌렀을 때 새로고침 되지 않고 작동해야합니다. -->
   <loginSection>
     <div id="login" class="show">
-      <form action="#" class="login_form">
+      <div class="login_form">
         <div>
           <h4>Login</h4>
           <input type="text" name="user_name" id="input_login">
@@ -37,7 +37,7 @@
           <button id="loginBtn">login</button>
           <button id="signUpBtn">sign Up</button>
         </div>
-      </form>
+      </div>
     </div>
   </loginSection>
   <section>
@@ -64,6 +64,7 @@
     $login      = document.querySelector("#login");
     $boardList  = document.querySelector(".board_list");
     $boardTop   = document.querySelector(".board_top");
+
   </script>
 </body>
 </html>
