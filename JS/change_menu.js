@@ -6,6 +6,7 @@
     // 조원 소개 창으로 바꾸어 주세요
     function defaultDisplay() {
       console.log("success");
+      $intro.className = 'hide';
       $board.className = 'hide';
       $login.className = 'show';
       // $cdialog.className = 'hide';
@@ -14,9 +15,18 @@
       // $boardContent.className = 'hide';
     }
 
+    function vIntro() {
+      $intro.className = 'show';
+      $login.className = 'show';
+      $board.className = 'hide';
+      introSlide();
+      getData();
+    }
+
     // 게시판 창으로 변환
     function vBoard() {
       console.log("success");
       $board.className = 'show';
       $login.className = 'show';
+      $intro.className = 'hide';
     }
