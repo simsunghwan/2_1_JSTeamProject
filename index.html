@@ -18,7 +18,7 @@
   <header>
     <!-- Head -->
     <div class="main_top" style="display: flex !important;"> <!-- display : flex 가 어떤 뜻이야?  -->
-      <div id="home_title" onclick="defaultDisplay()"><h1>Home</h1></div> 
+      <div id="home_title" onclick="vIntro()"><h1>Home</h1></div> 
       <nav>
         <div class="nav_bar" onclick="vIntro()"><h1>조원 소개</h1></div>
         <div class="nav_bar"><h1>현지학기제</h1></div>
@@ -57,7 +57,7 @@
         <button class="next" id="next">▶</button>
       </div>
     </div>
-    <!-- 게시판 -->
+    <!-- 게시판 조회 / 내용 조회 -->
     <div id="board" class="hide">
       <div class="sectionTitle"><h1>자유게시판</h1></div>
       <div class="board_list">
@@ -71,6 +71,14 @@
         <div id="conText">
           <div id="vContent"></div> <!-- input tag로 만들어 보자 -->
         </div>
+      </div>
+    </div>
+    <!-- 게시판 작성 -->
+    <div id="cBoard" class="hide">
+      <div class="sectionTitle"><h1>게시글 작성</h1></div>
+      <div class="cBoard_top">
+        <div class="cBoardTitle">제목</div>
+        <div class="cBoardContent">내용</div>
       </div>
     </div>
   </section>  
@@ -91,10 +99,11 @@
     const $boardTop   = document.querySelector(".board_top");
 
     // 게시판 버튼 선택자 (작성, 수정, 삭제)
-    const $board_btn  = document.querySelector('.board_button');
+    const $board_btn  = document.querySelector('#board_btn');
     const $create_board = document.querySelector("#create_board");
 
     $create_board.addEventListener('submit', postData);
+    vIntro();
   </script>
 </body>
 </html>

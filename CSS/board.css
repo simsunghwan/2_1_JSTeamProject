@@ -86,13 +86,13 @@
 }
 
 /* button css */
-#board_button{
+#board_btn{
   display: flex !important;
   flex-direction: row;
   justify-content: right;
 }
 
-#board_button > button {
+#board_btn > button {
   width: 80px;
   padding: 10px;
   margin-top: 10px;
