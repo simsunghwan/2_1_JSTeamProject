@@ -12,6 +12,11 @@
     $board_btn.className = 'hide';
   }
 
+  // 버튼 활성화 비활성화
+  function vBtn(argN) {
+    argN.className = 'hide';
+  }
+
   // 게시판 창으로 변환
   function vBoard() {
     console.log("success");
@@ -20,7 +25,6 @@
     $login.className = 'show';
     $create_board.className = 'show';
     $board_btn.className = 'show';
-    
   }
 
   // 조원 소개 전환
@@ -28,6 +32,8 @@
     $intro.className = 'show';
     $login.className = 'show';
     $board.className = 'hide';
+    $create_board.className = 'hide';
+    $board_btn.className = 'hide';
     introSlide();
     getData();
   }
