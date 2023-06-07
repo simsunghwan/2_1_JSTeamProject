@@ -1,0 +1,38 @@
+.slide-container {
+    width: 700vw;
+    height: 30%;
+    /* transform: translateX(-100vw); */
+    /* margin-left보다 부드러움 */
+    transition: all 1s;
+    display: flex;
+    align-items: center;
+
+    position: relative;
+  }
+  
+.slide-box {
+    align-items: center;
+    width: 100vw;
+    float: left;
+} 
+
+.before .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 24px;
+  padding: 0;
+  cursor: pointer;
+}
+.before {
+    left: 50%;
+    transform: translateX(45vw);
+  }
+  
+.next {
+    left: 50%;
+    transform: translateX(50vw);
+  }

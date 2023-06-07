@@ -7,8 +7,10 @@
   <title>6조 JS Project</title>
   <link rel="stylesheet" href="CSS/style.css">
   <link rel="stylesheet" href="CSS/media.css">
+  <link rel="stylesheet" href="CSS/intro.css">
   <script src="JS/change_menu.js"></script>
   <script src="JS/view_board.js"></script>
+  <script src="JS/getImage.js"></script>
   <script src="JS/create_board.js"></script>
   <script src="JS/login.js"></script>
 </head>
@@ -18,11 +20,12 @@
     <div class="main_top" style="display: flex !important;"> <!-- display : flex 가 어떤 뜻이야?  -->
       <div id="home_title" onclick="defaultDisplay()"><h1>Home</h1></div> 
       <nav>
-        <div class="nav_bar" onclick="defaultDisplay()"><h1>조원 소개</h1></div>
+        <div class="nav_bar" onclick="vIntro()"><h1>조원 소개</h1></div>
         <div class="nav_bar"><h1>현지학기제</h1></div>
         <div class="nav_bar" onclick="getPosts()"><h1>게시판</h1></div>
         <div class="nav_bar"><h1>준비중....</h1></div>
       </nav>
+
       <div id="login" class="show">
         <form action="#" class="login_form">
           <div>
@@ -40,7 +43,20 @@
   </header>
   <!-- Section -->
   <!-- 메뉴를 눌렀을 때 새로고침 되지 않고 작동해야합니다. -->
+  
+  
   <section>
+    <!-- 조원 소개 -->
+    <div id="intro" class="hide" style="overflow: hidden;">
+      <div>
+        <h1>조원 소개</h1>
+      </div>
+      <div id="sc" class="slide-container"></div>
+      <div>
+        <button class="before" id="before">◀</button>
+        <button class="next" id="next">▶</button>
+      </div>
+    </div>
     <!-- 게시판 -->
     <div id="board" class="hide">
       <div class="sectionTitle"><h1>자유게시판</h1></div>
@@ -67,6 +83,8 @@
     </div>
   </footer>
   <script>
+
+    const $intro      = document.querySelector("#intro");
     const $board      = document.querySelector("#board");
     const $login      = document.querySelector("#login");
     const $boardList  = document.querySelector(".board_list");
@@ -75,7 +93,6 @@
     // 게시판 버튼 선택자 (작성, 수정, 삭제)
     const $board_btn  = document.querySelector('.board_button');
     const $create_board = document.querySelector("#create_board");
-    
 
     $create_board.addEventListener('submit', postData);
   </script>
