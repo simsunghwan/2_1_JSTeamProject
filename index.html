@@ -27,17 +27,17 @@
       </nav>
 
       <div id="login" class="show">
-        <form action="#" class="login_form">
+        <div class="login_form">
           <div>
-            <h4>Login</h4> bn
-            <input type="text" name="user_name" id="input_login">
-            <input type="password" name="password" id="input_pw">
+            <h4>Login</h4>
+            <input onkeyup = "setId()" type="text" name="user_name" id="input_login">
+            <input onkeyup = "setpw()" type="password" name="password" id="input_pw">
           </div>
           <div class="btn">
-            <button id="loginBtn">login</button>
+            <button onclick = "login()" id="loginBtn">login</button>
             <button id="signUpBtn">sign Up</button>
           </div>
-        </form>
+        </div>
       </div>
     </div>
   </header>
