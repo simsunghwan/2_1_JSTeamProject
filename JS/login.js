@@ -1,13 +1,27 @@
-$input_login = document.querySelector("#input_login");
-$input_pw    = document.querySelector("#input_pw");
-
-
-function login() {
+class login extends HTMLElement {
+    constructor() { 
+        super();
     
-    if( $input_login.value === null) {
-        alert("ID를 입력해주세요");
-    } else if($input_pw.value === null) {
-        alert("PW를 입력해주세요");
+        this.currentOffset = 0;
+        
+
+    this.innerHTML =
+    `
+    <div id="login" class="show">
+        <div class="login_form">
+        <div>
+            <h4>Login</h4>
+            <input onkeyup = "setId()" type="text" name="user_name" id="input_login"></input>
+            <input type="password" name="password" id="input_pw"></input>
+        </div>
+        <div class="btn">
+            <button onclick = "login()" id="loginBtn">login</button>
+            <button id="signUpBtn">sign Up</button>
+        </div>
+    </div>
+    `
+
     }
-    
+
+
 }
