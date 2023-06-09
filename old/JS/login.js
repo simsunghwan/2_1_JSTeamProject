@@ -21,6 +21,15 @@ class login extends HTMLElement {
     </div>
     `
 
+        const input = document.querySelector('#input_pw')
+        input.addEventListener('click', () => {
+            this.asdasd();
+        })
+
+    }
+
+    asdasd() {
+        
     }
 
 
