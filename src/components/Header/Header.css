@@ -1,0 +1,60 @@
+.main_top {
+  display: flex !important;
+  /* flex-direction: column; 세로로 정렬 */
+  width: 100%; /* 최대 길이 */
+  justify-content: space-between;
+}
+
+/* home title 에 대한 css */
+#home_title,
+.nav_bar {
+  width: 150px;
+  height: 80px;
+  /* border: 1px solid red; */
+  float: left;
+  text-align: center;
+  align-items: center;
+  background: #999;
+  cursor: pointer;    /* div tag에 마우스를 올리면 손모양으로 마우스포인터가 바뀜 */
+  user-select: none;  /* div tag 내 text 를 클릭해도 마우스 프롬프트가 생기지 않음 */
+}
+
+#home_title:hover,
+.nav_bar:hover{
+  background: #fff;
+}
+
+/* login form 에 대한 css */
+loginSection {
+  display: block;
+  width: 100%;
+  height: 150px;
+}
+
+.login_form {
+  width: 15rem;
+  display: flex; 
+  flex-direction: column;
+  float: right;
+  border: solid 1px black;
+}
+
+.login_form > .btn{
+  display: flex;
+  margin-left: 15%;
+  margin-right: 15%;
+  justify-content: space-between;
+}
+
+#loginBtn{
+  width: 3rem;
+}
+
+#signUpBtn{
+  width: 5rem;
+}
+
+#input_login,
+#input_pw{
+  margin-left: 15%;
+}
