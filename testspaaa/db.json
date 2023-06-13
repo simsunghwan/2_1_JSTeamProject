@@ -1,0 +1,73 @@
+{
+  "page": [
+    {
+      "title": "Home",
+      "slug": "home",
+      "content": "home",
+      "id": 1
+    },
+    {
+      "title": "About",
+      "slug": "about",
+      "content": "about",
+      "id": 2
+    },
+    {
+      "title": "Shopping list",
+      "slug": "shopping list",
+      "content": "zzz zzz",
+      "id": 3
+    }
+  ],
+  "category": [
+    {
+      "title": "food",
+      "slug": "food",
+      "id": 1
+    },
+    {
+      "title": "drink",
+      "slug": "drink",
+      "id": 1
+    }
+  ],
+  "product": [
+    {
+      "title": "qwer",
+      "desc": "asdfw",
+      "category": "food",
+      "price": "12341",
+      "image": "",
+      "id": 1
+    }
+  ],
+  "board": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "writer": "typicode",
+      "content": "test content",
+      "createdAt": "2021.1.15",
+      "image": "",
+      "hit": 1
+    },
+    {
+      "title": "qwer",
+      "writer": "asdfasdfasdf",
+      "content": "qwersvzxvasddfawer",
+      "createdAt": "2023.06.13",
+      "hit": 0,
+      "image": "",
+      "id": 2
+    },
+    {
+      "title": "123123",
+      "writer": "qweqwe",
+      "content": "qasasdasdasd",
+      "createdAt": "2023.06.13",
+      "hit": 0,
+      "image": "",
+      "id": 3
+    }
+  ]
+}

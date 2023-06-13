@@ -1,9 +1,6 @@
 import Main from './pages/Main.js'
 import vBoard from './pages/vBoard.js'
-// import Men from './pages/Men.js'
-// import Women from './pages/Women.js'
 
-const $root = document.querySelector('#root');
 // 페이지 전환
 // history.pushState(state, title, URL) : 현재 페이지의 상태를 변경하지 않고, 새로운 주소를 추가
 const routerLink = url => {
@@ -53,10 +50,8 @@ const router = async () => {
 
 // 뒤로가기나 새로고침을 했을 때 router함수 실행
 window.addEventListener('popstate', router)
-
 // 렌더링 되면 router함수 실행
 document.addEventListener('DOMContentLoaded', () => {
-
   // 클릭했을 때 data-link 속성이 있으면 routerLink 함수 실행
   document.body.addEventListener('click', e => {
     if(e.target.matches('[data-link]')) {
@@ -64,6 +59,5 @@ document.addEventListener('DOMContentLoaded', () => {
       routerLink(e.target.href)
     }
   })
-
   router()
 })
