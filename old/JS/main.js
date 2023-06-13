@@ -6,6 +6,12 @@ export default class {
     }
 
     getHtml() {
-        `<header-component></header-component>`
+
+        `
+        <div class='header'>
+            <header-component></header-component>
+            <>
+        </div>
+        `
     }
 }

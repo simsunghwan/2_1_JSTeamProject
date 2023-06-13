@@ -3,7 +3,6 @@ import vBoard from './pages/vBoard.js'
 // import Men from './pages/Men.js'
 // import Women from './pages/Women.js'
 
-const $root = document.querySelector('#root');
 // 페이지 전환
 // history.pushState(state, title, URL) : 현재 페이지의 상태를 변경하지 않고, 새로운 주소를 추가
 const routerLink = url => {
@@ -13,11 +12,13 @@ const routerLink = url => {
 
 const router = async () => {
   // 경로 설정
+  
+
   const routes = [
-    { path: '/', view: Main },
+    { path: '/index.HTML', view: Main },
     { path: '/vBoard', view: vBoard },
     { path: '/404', view: () => console.log('Viewing 404')}
-  ]
+  ];
 
   // 현재 접속되어있는 주소와 일치하는 경로를 찾기
   const pageMatch = routes.map(route => {

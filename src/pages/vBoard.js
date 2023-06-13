@@ -2,13 +2,16 @@ import '../components/Section/Board/Board.js'
 
 export default class {
   constructor() {
-    document.title = 'Board';
+    document.title = 'vBoard';
   }
-  async getHtml() {
+  getHtml() {
     return `
-      <section-board-component>
-      
-      </section-board-component>
-    `;
+    <div>
+      <section-board-component></section-board-component>
+    </div>
+      `;
   }
+  
+
 }
+
