@@ -10,11 +10,13 @@ const routerLink = url => {
 
 const router = async () => {
   // 경로 설정
+  
+
   const routes = [
-    { path: '/', view: Main },
+    { path: '/index.HTML', view: Main },
     { path: '/vBoard', view: vBoard },
     { path: '/404', view: () => console.log('Viewing 404')}
-  ]
+  ];
 
   // 현재 접속되어있는 주소와 일치하는 경로를 찾기
   const pageMatch = routes.map(route => {
