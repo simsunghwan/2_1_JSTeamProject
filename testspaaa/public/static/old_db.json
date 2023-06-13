@@ -1,0 +1,44 @@
+{
+  "page": [
+    {
+      "title": "Home",
+      "slug": "home",
+      "content": "home",
+      "id": 1
+    },
+    {
+      "title": "About",
+      "slug": "about",
+      "content": "about",
+      "id": 2
+    },
+    {
+      "title": "Shopping list",
+      "slug": "shopping list",
+      "content": "zzz zzz",
+      "id": 3
+    }
+  ],
+  "category": [
+    {
+      "title": "food",
+      "slug": "food",
+      "id": 1
+    },
+    {
+      "title": "drink",
+      "slug": "drink",
+      "id": 1
+    }
+  ],
+  "product": [
+    {
+      "title": "",
+      "slug": "",
+      "content": "",
+      "category": "",
+      "price": "",
+      "image": ""
+    }
+  ]
+}
