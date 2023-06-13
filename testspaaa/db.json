@@ -43,31 +43,22 @@
   ],
   "board": [
     {
-      "id": 1,
-      "title": "json-server",
-      "writer": "typicode",
-      "content": "test content",
-      "createdAt": "2021.1.15",
+      "title": "as",
+      "writer": "asd",
+      "content": "asd",
+      "createdAt": "2023.06.13",
+      "hit": 5,
       "image": "",
-      "hit": 1
+      "id": 1
     },
     {
-      "title": "qwer",
-      "writer": "asdfasdfasdf",
-      "content": "qwersvzxvasddfawer",
+      "title": "ㅁㄴㅇㄹ",
+      "writer": "ㅁㄴㅇㄹ",
+      "content": "ㅁㄴㅇㄹ",
       "createdAt": "2023.06.13",
-      "hit": 0,
+      "hit": 1,
       "image": "",
       "id": 2
-    },
-    {
-      "title": "123123",
-      "writer": "qweqwe",
-      "content": "qasasdasdasd",
-      "createdAt": "2023.06.13",
-      "hit": 0,
-      "image": "",
-      "id": 3
     }
   ]
 }
