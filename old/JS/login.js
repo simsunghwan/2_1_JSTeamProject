@@ -29,8 +29,9 @@ class login extends HTMLElement {
     }
 
     asdasd() {
-        
+        // asdasd 로직 구현
+        console.log('asdasd function called');
+      }
     }
-
-
-}
+    
+    window.customElements.define('login-component', Login);
