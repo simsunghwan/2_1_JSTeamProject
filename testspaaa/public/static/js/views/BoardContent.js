@@ -6,7 +6,39 @@ export default class extends AbstractView {
     this.setTitle("Board/BoardContent");
   }
 
+  async increaseHit() {
+    let response = await fetch("/board");
+    let data = await response.json();
+    const boardId = location.pathname.replace("/board/", "");
+
+    let hit = "";
+    
+    data.forEach(board => {
+      if(board.id === parseInt(boardId)) {
+        hit = parseInt(board.hit);
+      }
+    })
+
+    console.log(hit);
+    response = await fetch('/board/' + boardId, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        hit: hit + 1
+      })
+    })
+
+    if(response.ok) {
+      console.log('데이터 전송 성공');
+    } else {
+      console.error('데이터 전송 실패')
+    }
+  }
+
   async getBoardContent() {
+    this.increaseHit();
     const response = await fetch("/board");
     const data = await response.json();
     const boardId = location.pathname.replace("/board/", "");
@@ -27,7 +59,7 @@ export default class extends AbstractView {
         writer = board.writer;
         createdAt = board.createdAt;
         image = board.image;
-        hit = board.hit;
+        hit = board.hit + 1;
       }
     })
     
@@ -75,7 +107,6 @@ export default class extends AbstractView {
       <tBody>
         ${tableRows}
       </tBody>
-      
     `;
   }
 }
