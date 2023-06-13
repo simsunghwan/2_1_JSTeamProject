@@ -1,6 +1,8 @@
 
 const $loginBtn = document.querySelector('#loginBtn');
 const $errorMessage = document.querySelector('.error_message');
+const $login = document.querySelector('#login');
+
 let flag = false;
 
 $loginBtn.addEventListener('click', async (e)=>{
@@ -30,6 +32,7 @@ $loginBtn.addEventListener('click', async (e)=>{
     }
     
     console.log( sessionStorage.getItem('userId'));
+    $login.classList.replace('show','hidden');
 })
 
 async function checkUser(id, pw) {
