@@ -54,6 +54,7 @@
             return {
                 route: route,
                 result: location.pathname.match(pathToRegex(route.path))
+                /* pathToRegex  : 문자열로 된 경로를 정규표현식으로 변환하는 함수 */
             };
         });
 
