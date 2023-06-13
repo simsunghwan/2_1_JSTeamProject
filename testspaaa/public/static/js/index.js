@@ -3,6 +3,7 @@
     import PostView from "./views/PostView.js";
     import Contact from "./views/Contact.js";
     import BoardView from "./views/BoardView.js";
+    import BoardContent from './views/BoardContent.js';
     import AdminPages from "./views/admin/Pages.js";
     import AdminAddPage from "./views/admin/AddPage.js";
     import AdminEditPage from "./views/admin/EditPage.js";
@@ -11,7 +12,7 @@
     import AdminEditCategory from "./views/admin/EditCategory.js";
     import AdminProducts from "./views/admin/Products.js";
     import AdminAddProduct from "./views/admin/AddProduct.js";
-import AddBoard from "./views/AddBoard.js";
+    import AddBoard from "./views/AddBoard.js";
 
     const pathToRegex = path => new RegExp("^" + path.replace(/\//g, "\\/").replace(/:\w+/g, "(.+)") + "$");
 
@@ -37,6 +38,7 @@ import AddBoard from "./views/AddBoard.js";
             { path: "/contact", view: Contact },
             { path: "/board", view: BoardView},
             { path: "/board/add-board", view: AddBoard},
+            { path: "/board/:id", view: BoardContent},
             { path: "/admin/pages", view: AdminPages },
             { path: "/admin/pages/add-page", view: AdminAddPage },
             { path: "/admin/pages/edit-page/:id", view: AdminEditPage },

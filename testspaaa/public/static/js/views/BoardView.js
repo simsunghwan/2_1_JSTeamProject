@@ -26,7 +26,7 @@ export default class extends AbstractView {
               return `
                   <tr>
                   <td>${boardData.id}</td>
-                  <td>${boardData.title}</td>
+                  <td><a href=/board/${boardData.id} data-link>${boardData.title}</a></td>
                   <td>${boardData.writer}</td>
                   <td>${boardData.createdAt}</td>
                   <td>${boardData.hit}</td>
@@ -38,7 +38,7 @@ export default class extends AbstractView {
               return `
                   <tr>
                       <td>${boardData.id}</td>
-                      <td>${boardData.title}</td>
+                      <td><a href=/board/${boardData.id} data-link>${boardData.title}</a></td>
                       <td>${boardData.writer}</td>
                       <td>${boardData.createdAt}</td>
                       <td>${boardData.hit}</td>
