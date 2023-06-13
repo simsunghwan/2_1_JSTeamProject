@@ -9,8 +9,6 @@ export default class extends AbstractView {
   async getHtml() {
       const response = await fetch("/board");
       const data = await response.json(); 
-
-      // 이미지의 url 을 가져와 처리
       let tableRows = '';
 
       if (data.length === 0) {

@@ -47,7 +47,7 @@
       "writer": "asd",
       "content": "asd",
       "createdAt": "2023.06.13",
-      "hit": 5,
+      "hit": 34,
       "image": "",
       "id": 1
     },
@@ -56,9 +56,41 @@
       "writer": "ㅁㄴㅇㄹ",
       "content": "ㅁㄴㅇㄹ",
       "createdAt": "2023.06.13",
-      "hit": 1,
+      "hit": 23,
       "image": "",
       "id": 2
+    },
+    {
+      "title": "1234",
+      "writer": "123",
+      "content": "123",
+      "createdAt": "2023.06.13",
+      "hit": 13,
+      "image": "",
+      "id": 3
+    },
+    {
+      "title": "qwe",
+      "writer": "asd",
+      "content": "asdasdaxczcasdasdadsda\ndasdasdqwezxc\nasaxcv\nzasdrwerqwtrwetf\nvxdfqawevsvsdfcfoiwhfoheohs\nxfoihiwheihaowhfixenuonuowdfnsfvldhflafldsflhasoeifhcxva\nfwepirqutuidjg",
+      "createdAt": "2023.06.13",
+      "hit": 10,
+      "image": "",
+      "id": 4
+    }
+  ],
+  "user": [
+    {
+      "id": "daehan"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "userId": "daehan",
+      "postId": 4,
+      "content": "test comment plz",
+      "postTime": "2023.06.14 12:25:42"
     }
   ]
 }
