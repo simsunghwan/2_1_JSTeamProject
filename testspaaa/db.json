@@ -47,43 +47,25 @@
       "writer": "asd",
       "content": "asd",
       "createdAt": "2023.06.13",
-      "hit": 42,
+      "hit": 56,
       "image": "",
       "id": 1
-    },
-    {
-      "title": "ㅁㄴㅇㄹ",
-      "writer": "ㅁㄴㅇㄹ",
-      "content": "ㅁㄴㅇㄹ",
-      "createdAt": "2023.06.13",
-      "hit": 28,
-      "image": "",
-      "id": 2
     },
     {
       "title": "1234",
       "writer": "123",
       "content": "123",
       "createdAt": "2023.06.13",
-      "hit": 18,
+      "hit": 37,
       "image": "",
       "id": 3
-    },
-    {
-      "title": "qwe",
-      "writer": "asd",
-      "content": "asdasdaxczcasdasdadsda\ndasdasdqwezxc\nasaxcv\nzasdrwerqwtrwetf\nvxdfqawevsvsdfcfoiwhfoheohs\nxfoihiwheihaowhfixenuonuowdfnsfvldhflafldsflhasoeifhcxva\nfwepirqutuidjg",
-      "createdAt": "2023.06.13",
-      "hit": 20,
-      "image": "",
-      "id": 4
     },
     {
       "title": "ㅂㅈㄷㄱㅁㄴ",
       "writer": "ㅇㄹㅁㄴㅇㄹㅈㅂ",
       "content": "ㅈㄹㄷㅁㄴㅇㄹㅈㄷㅂ\nㅁㄴㄹㅈ데롬\n테스트\n응애\n앎내러ㅔㅁ더제렆ㅁㅈ\n",
       "createdAt": "2023.06.14",
-      "hit": 28,
+      "hit": 246,
       "image": "",
       "id": 5
     }
@@ -107,20 +89,6 @@
       "content": "안녕하세요",
       "postTime": "2023-6-14 14:11:54",
       "id": 2
-    },
-    {
-      "userId": "daehan",
-      "postId": "5",
-      "content": "뭐지",
-      "postTime": "2023-6-14 14:12:5",
-      "id": 3
-    },
-    {
-      "userId": "daehan",
-      "postId": "5",
-      "content": "어라?",
-      "postTime": "2023-6-14 14:12:12",
-      "id": 4
     },
     {
       "postId": "2",
@@ -151,6 +119,13 @@
       "content": "qwe",
       "postTime": "2023-6-14 15:4:34",
       "id": 9
+    },
+    {
+      "userId": "daehan",
+      "postId": "5",
+      "content": "시발",
+      "postTime": "2023-6-14 22:35:9",
+      "id": 10
     }
   ]
 }

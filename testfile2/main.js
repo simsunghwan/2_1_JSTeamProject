@@ -264,7 +264,6 @@ function modifyComments(event) {
       if (event.key === "Enter") {
         // 수정 버튼 클릭 이벤트와 동일한 동작 수행
         console.dir(mBtn.parentNode.parentNode.children[1]);
-  
         for (var i = 0; i < idOrVoteCountList.length; i++) {
           if (idOrVoteCountList[i]["commentId"].toString() === mBtn.parentNode.id) {
             idOrVoteCountList[i]["commentValue"] = input.value;
