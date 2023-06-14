@@ -67,8 +67,7 @@ export default class extends AbstractView {
     })
 
     // comments 의 개수에 따라 다른 출력?
-    
-    // if()
+
     return `
       <h2 class="title">${title}</h2>
       <article class="content_top">
@@ -119,7 +118,7 @@ export default class extends AbstractView {
     `;
   }
 
-  //타임스템프 만들기
+  //타임스탬프 만들기
   generateTime(){
     const date = new Date();
     const year = date.getFullYear();
@@ -146,6 +145,7 @@ export default class extends AbstractView {
       // const board_id = document.querySelector('#board_id');
 
       console.log(JSON.stringify({
+        userId: "daehan",
         postId: formData.get('board_id'),
         content: formData.get('comment-input'),
         postTime: this.generateTime()
@@ -175,36 +175,83 @@ export default class extends AbstractView {
 
   // 게시글 댓글 가져오기
   async getBoardComment() {
+    console.log("getBoardComment");
     const response = await fetch("/comments");
     const data = await response.json();
     const boardId = location.pathname.replace("/board/", "");
     
-    let userId = "";
-    let content = "";
-    let postTime = "";
-    let commentId = "";
-    let commentExist = true;
+    // let userId = "";
+    // let content = "";
+    // let postTime = "";
+    // let commentId = "";
+    let commentExist = false;
+
+
+    // 해당 게시글의 Id와 댓글의 postId가 같으면 댓글을 들고옴
+    const filteredComments = data.filter(item => item.postId.includes(boardId));
+
+    // console.log(filteredComments);
+    // console.log(filteredComments[0].content);
     data.forEach(comment => {
-      if(comment.postId === parseInt(boardId)) {
-        userId = comment.userId;
-        content = comment.content;
-        postTime = comment.postTime;
-        commentId = comment.id;
-      }else {
-        commentExist = false;
+      if(parseInt(comment.postId) === parseInt(boardId)) {
+        // userId = comment.userId;
+        // content = comment.content;
+        // postTime = comment.postTime;
+        // commentId = comment.id;
+        commentExist = true;
       }
     })
 
+    const rootDiv = document.createElement('div');
+    rootDiv.id = "comments"
+    
+    filteredComments.forEach(comment => {
+      const userName = document.createElement('div');
+      userName.className="name";
+      //유저네임가져오기 
+      userName.innerHTML = comment.userId;  
+
+      const inputValue = document.createElement('span');
+      inputValue.className="inputValue";
+      inputValue.innerText = comment.content;
+      
+      //타임스템프찍기
+      const showTime = document.createElement('div');
+      showTime.className="time";
+      showTime.innerHTML = comment.postTime;  
+
+      // 스코프 밖으로 나가는 순간 하나지우면 다 지워지고 입력하면 리스트 불러옴
+      const commentList = document.createElement('div');  
+      commentList.className = "eachComment";
+
+      //수정버튼 만들기
+      const modifyBtn = document.createElement('button');
+      modifyBtn.className = 'modifyBtn';
+      modifyBtn.innerHTML = "수정";
+      
+      //스페이서만들기
+      const spacer = document.createElement('div');
+      spacer.className = "spacer";
+
+      //삭제버튼 만들기
+      const delBtn = document.createElement('button');
+      delBtn.className ="deleteComment";
+      delBtn.innerHTML="삭제"; 
+
+      userName.appendChild(spacer);
+      userName.appendChild(modifyBtn);
+      userName.appendChild(delBtn); 
+
+      commentList.appendChild(userName);
+      commentList.appendChild(inputValue);
+      commentList.appendChild(showTime);
+
+      rootDiv.prepend(commentList);
+    })
+    
+
     if (commentExist){
-      return `
-        <div class="name" id="newId">${userId}
-          <div class="spacer">${commentId}</div>        
-          <button type="button" class="modifyBtn">수정</button>
-          <button type="button" class="deleteComment">삭제</button>
-        </div>
-        <span class="inputValue" id="newId">${content}</span>
-        <div class="time">${postTime}</div>
-      `
+      return rootDiv.innerHTML;
     } else {
       return null;
     }   

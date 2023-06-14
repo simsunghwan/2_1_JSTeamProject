@@ -47,7 +47,7 @@
       "writer": "asd",
       "content": "asd",
       "createdAt": "2023.06.13",
-      "hit": 34,
+      "hit": 42,
       "image": "",
       "id": 1
     },
@@ -56,7 +56,7 @@
       "writer": "ㅁㄴㅇㄹ",
       "content": "ㅁㄴㅇㄹ",
       "createdAt": "2023.06.13",
-      "hit": 23,
+      "hit": 28,
       "image": "",
       "id": 2
     },
@@ -65,7 +65,7 @@
       "writer": "123",
       "content": "123",
       "createdAt": "2023.06.13",
-      "hit": 13,
+      "hit": 17,
       "image": "",
       "id": 3
     },
@@ -74,9 +74,18 @@
       "writer": "asd",
       "content": "asdasdaxczcasdasdadsda\ndasdasdqwezxc\nasaxcv\nzasdrwerqwtrwetf\nvxdfqawevsvsdfcfoiwhfoheohs\nxfoihiwheihaowhfixenuonuowdfnsfvldhflafldsflhasoeifhcxva\nfwepirqutuidjg",
       "createdAt": "2023.06.13",
-      "hit": 10,
+      "hit": 20,
       "image": "",
       "id": 4
+    },
+    {
+      "title": "ㅂㅈㄷㄱㅁㄴ",
+      "writer": "ㅇㄹㅁㄴㅇㄹㅈㅂ",
+      "content": "ㅈㄹㄷㅁㄴㅇㄹㅈㄷㅂ\nㅁㄴㄹㅈ데롬\n테스트\n응애\n앎내러ㅔㅁ더제렆ㅁㅈ\n",
+      "createdAt": "2023.06.14",
+      "hit": 27,
+      "image": "",
+      "id": 5
     }
   ],
   "user": [
@@ -88,9 +97,60 @@
     {
       "id": 1,
       "userId": "daehan",
-      "postId": 4,
+      "postId": "4",
       "content": "test comment plz",
       "postTime": "2023.06.14 12:25:42"
+    },
+    {
+      "userId": "daehan",
+      "postId": "5",
+      "content": "안녕하세요",
+      "postTime": "2023-6-14 14:11:54",
+      "id": 2
+    },
+    {
+      "userId": "daehan",
+      "postId": "5",
+      "content": "뭐지",
+      "postTime": "2023-6-14 14:12:5",
+      "id": 3
+    },
+    {
+      "userId": "daehan",
+      "postId": "5",
+      "content": "어라?",
+      "postTime": "2023-6-14 14:12:12",
+      "id": 4
+    },
+    {
+      "postId": "2",
+      "content": "ㅁㄴㅇㄹ",
+      "postTime": "2023-6-14 14:39:59",
+      "id": 5
+    },
+    {
+      "postId": "3",
+      "content": "qwerq",
+      "postTime": "2023-6-14 15:0:56",
+      "id": 6
+    },
+    {
+      "postId": "1",
+      "content": "1234rqfs",
+      "postTime": "2023-6-14 15:1:4",
+      "id": 7
+    },
+    {
+      "postId": "1",
+      "content": "asdf",
+      "postTime": "2023-6-14 15:1:57",
+      "id": 8
+    },
+    {
+      "postId": "1",
+      "content": "qwe",
+      "postTime": "2023-6-14 15:4:34",
+      "id": 9
     }
   ]
 }
