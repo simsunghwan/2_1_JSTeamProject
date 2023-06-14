@@ -157,6 +157,7 @@ export default class extends AbstractView {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify( {
+          userId: "daehan",
           postId: formData.get('board_id'),
           content: formData.get('comment-input'),
           postTime: this.generateTime()
@@ -179,13 +180,8 @@ export default class extends AbstractView {
     const response = await fetch("/comments");
     const data = await response.json();
     const boardId = location.pathname.replace("/board/", "");
-    
-    // let userId = "";
-    // let content = "";
-    // let postTime = "";
-    // let commentId = "";
+  
     let commentExist = false;
-
 
     // 해당 게시글의 Id와 댓글의 postId가 같으면 댓글을 들고옴
     const filteredComments = data.filter(item => item.postId.includes(boardId));
@@ -194,17 +190,13 @@ export default class extends AbstractView {
     // console.log(filteredComments[0].content);
     data.forEach(comment => {
       if(parseInt(comment.postId) === parseInt(boardId)) {
-        // userId = comment.userId;
-        // content = comment.content;
-        // postTime = comment.postTime;
-        // commentId = comment.id;
         commentExist = true;
       }
     })
 
     const rootDiv = document.createElement('div');
     rootDiv.id = "comments"
-    
+
     filteredComments.forEach(comment => {
       const userName = document.createElement('div');
       userName.className="name";
