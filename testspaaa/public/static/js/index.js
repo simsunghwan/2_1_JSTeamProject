@@ -12,6 +12,7 @@
     import AdminProducts from "./views/admin/Products.js";
     import AdminAddProduct from "./views/admin/AddProduct.js";
 import AddBoard from "./views/AddBoard.js";
+    
 
     const pathToRegex = path => new RegExp("^" + path.replace(/\//g, "\\/").replace(/:\w+/g, "(.+)") + "$");
 
