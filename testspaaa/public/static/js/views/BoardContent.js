@@ -8,6 +8,7 @@ export default class extends AbstractView {
 
   async pageFunction() {
     this.addComment();
+    this.deleteComments();
   }
 
   async increaseHit() {
@@ -98,8 +99,10 @@ export default class extends AbstractView {
     commentRows = await this.getBoardComment();
     console.log(tableRows);
     console.log(commentRows);
+    
+    let view = '';
     if(commentRows === null){
-      return `
+      view =  `
         <h2 class="board-title">자유게시판</h2>
         <a href="/board" class="btn btn-primary" data-link>뒤로가기</a>
         <tBody>
@@ -107,15 +110,18 @@ export default class extends AbstractView {
           <h2>아직 댓글이 없습니다.</h2>
         </tBody>
       `;
-    }
-    return `
+    } else {
+      view = `
       <h2 class="board-title">자유게시판</h2>
       <a href="/board" class="btn btn-primary" data-link>뒤로가기</a>
       <tBody>
         ${tableRows}
         ${commentRows}
       </tBody>
-    `;
+      `;
+    }
+
+    return view;
   }
 
   //타임스탬프 만들기
@@ -157,7 +163,7 @@ export default class extends AbstractView {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify( {
-          userId: "daehan",
+          userId: "daehan", /* 유저 이름 받아야함 */
           postId: formData.get('board_id'),
           content: formData.get('comment-input'),
           postTime: this.generateTime()
@@ -185,7 +191,7 @@ export default class extends AbstractView {
 
     // 해당 게시글의 Id와 댓글의 postId가 같으면 댓글을 들고옴
     const filteredComments = data.filter(item => item.postId.includes(boardId));
-
+    
     // console.log(filteredComments);
     // console.log(filteredComments[0].content);
     data.forEach(comment => {
@@ -217,18 +223,27 @@ export default class extends AbstractView {
       commentList.className = "eachComment";
 
       //수정버튼 만들기
-      const modifyBtn = document.createElement('button');
+      const modifyBtn = document.createElement('a');
+      modifyBtn.href = `/board/edit-comment/${comment.id}`;
       modifyBtn.className = 'modifyBtn';
+      const hiddenValue = comment.id; 
       modifyBtn.innerHTML = "수정";
+      // modifyBtn.setAttribute('data-value', hiddenValue);
+      // modifyBtn.setAttribute('type','button');
+      modifyBtn.setAttribute('data-link','');
+
       
       //스페이서만들기
       const spacer = document.createElement('div');
       spacer.className = "spacer";
 
       //삭제버튼 만들기
-      const delBtn = document.createElement('button');
+      const delBtn = document.createElement('a');
+      delBtn.href = `/board/${comment.postId}`;
       delBtn.className ="deleteComment";
-      delBtn.innerHTML="삭제"; 
+      delBtn.textContent="삭제";
+      delBtn.setAttribute('data-value', hiddenValue);
+      delBtn.setAttribute('data-link','');
 
       userName.appendChild(spacer);
       userName.appendChild(modifyBtn);
@@ -239,8 +254,10 @@ export default class extends AbstractView {
       commentList.appendChild(showTime);
 
       rootDiv.prepend(commentList);
-    })
-    
+
+      // console.log(modifyBtn)
+      
+    });
 
     if (commentExist){
       return rootDiv.innerHTML;
@@ -248,4 +265,32 @@ export default class extends AbstractView {
       return null;
     }   
   }
+
+  deleteComments() {
+    console.log("삭제 시작");
+    const $deleteCommentBtn = document.querySelectorAll('.deleteComment');
+    $deleteCommentBtn.forEach(element => {
+      element.addEventListener("click",async(e) => {
+      e.preventDefault();
+      const checkDelete = confirm("삭제하시겠습니까?");
+      const comment_id = element.getAttribute('data-value');
+      if(checkDelete) {
+        const response = await fetch('/comments/' + comment_id, 
+        {
+          method: 'DELETE',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+        });
+
+        // 응답 처리
+        if (response.ok) {
+          console.log('Data submitted successfully');
+        } else {
+          console.error('Error submitting data');
+        }
+      }
+    })
+   })
+ };
 }
