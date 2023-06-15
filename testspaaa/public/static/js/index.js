@@ -13,12 +13,7 @@
     import AdminEditCategory from "./views/admin/EditCategory.js";
     import AdminProducts from "./views/admin/Products.js";
     import AdminAddProduct from "./views/admin/AddProduct.js";
-<<<<<<< HEAD
-import AddBoard from "./views/AddBoard.js";
-    
-=======
     import AddBoard from "./views/AddBoard.js";
->>>>>>> 1da773bff18f593ff3c35a6bed0075e2f8a21aaa
 
     const pathToRegex = path => new RegExp("^" + path.replace(/\//g, "\\/").replace(/:\w+/g, "(.+)") + "$");
 
