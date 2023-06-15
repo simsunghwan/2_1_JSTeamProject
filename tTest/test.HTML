@@ -6,6 +6,8 @@
     <title>Document</title>
     <script defer src="login.js"></script>
     <link rel="stylesheet" href="login.css">
+    <script defer src="inputUser.js"></script>
+    <script defer src="logout.js"></script>
 </head>
 <body>
     <div id="login" class="show">
@@ -14,7 +16,7 @@
             <h4>Login</h4>
             <input  type="text" name="user_name" id="input_login">
             <input type="password" name="password" id="input_pw">
-    s      </div>
+          </div>
           <div class="error_message" style="color:red"> </div>
           <div class="btn">
             <button id="loginBtn" type="submit">로그인</button>
@@ -23,7 +25,49 @@
         </form>
     </div>
 
+    <div id="login" class="show">
+      <div>
+        <h4>Logout</h4>
+      </div>
+      <div class="userNickName"></div>
+      <button id="logoutBtn" type="button">로그아웃</button>
+    </div>
 
+  
+    <h1>회원가입</h1>
+    <div id="signUpBox" class="show">
+    <div id="signup-div">
+      <div>
+        <label for="nickName">아이디:</label>
+        <input type="text" id="userId" name="userId" required>
+      </div>
+      <div>
+        <label for="password">비밀번호:</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <div>
+        <label for="name">이름:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div>
+        <label for="name">별명:</label>
+        <input type="text" id="nickName" name="nickName" required>
+      </div>
+      <div>
+        <label for="birth">생일:</label>
+        <input type="text" id="birth" name="birth" required>
+      </div>
+      <div>
+        <label for="phone">전화번호:</label>
+        <input type="text" id="phone" name="phone" required>
+      </div>
+      <div>
+        <button id="signup" type="button">가입하기</button>
+      </div>
+    </div>
+    </div>
+    
+  
 </body>
 </html>
   
