@@ -97,12 +97,6 @@ function deleteComments(){
     }
 }
 
-//수정창 모달로 만들기
-function modifyComments(event){
-    const mBtn = event.target;
-    const modal = document.createElement('div');
-}
-
 
 //댓글보여주기
 function showComment(comment){

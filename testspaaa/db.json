@@ -56,7 +56,7 @@
       "writer": "123",
       "content": "123",
       "createdAt": "2023.06.13",
-      "hit": 37,
+      "hit": 40,
       "image": "",
       "id": 3
     },
@@ -65,7 +65,7 @@
       "writer": "ㅇㄹㅁㄴㅇㄹㅈㅂ",
       "content": "ㅈㄹㄷㅁㄴㅇㄹㅈㄷㅂ\nㅁㄴㄹㅈ데롬\n테스트\n응애\n앎내러ㅔㅁ더제렆ㅁㅈ\n",
       "createdAt": "2023.06.14",
-      "hit": 246,
+      "hit": 266,
       "image": "",
       "id": 5
     }
@@ -86,7 +86,7 @@
     {
       "userId": "daehan",
       "postId": "5",
-      "content": "안녕하세요",
+      "content": "ㅂㅈㄷ",
       "postTime": "2023-6-14 14:11:54",
       "id": 2
     },
@@ -98,8 +98,8 @@
     },
     {
       "postId": "3",
-      "content": "qwerq",
-      "postTime": "2023-6-14 15:0:56",
+      "content": "ㅅㅄㅄㅄㅄㅂ",
+      "postTime": "2023-6-15 19:41:28",
       "id": 6
     },
     {
@@ -123,8 +123,8 @@
     {
       "userId": "daehan",
       "postId": "5",
-      "content": "시발",
-      "postTime": "2023-6-14 22:35:9",
+      "content": "안녕",
+      "postTime": "2023-6-15 19:49:35",
       "id": 10
     }
   ]
