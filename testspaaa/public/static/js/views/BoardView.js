@@ -9,9 +9,8 @@ export default class extends AbstractView {
   async getHtml() {
       const response = await fetch("/board");
       const data = await response.json(); 
-
-      // 이미지의 url 을 가져와 처리
       let tableRows = '';
+      let boardCount = 0;
 
       if (data.length === 0) {
         return `
@@ -23,29 +22,31 @@ export default class extends AbstractView {
       else {
         tableRows = data.map(boardData => {
           if (boardData.image === "") {
+            boardCount++;
               return `
-                  <tr>
-                  <td>${boardData.id}</td>
-                  <td>${boardData.title}</td>
-                  <td>${boardData.writer}</td>
-                  <td>${boardData.createdAt}</td>
-                  <td>${boardData.hit}</td>
-                  <td><a href="/board/edit-board/${boardData.id}" data-link>게시글 수정</a></td>
-                  <td><a class="confirmDeletion" href="/board/delete-board/${boardData.id}" data-link>게시글 삭제</a></td>
-                  </tr>
+                <tr>
+                <td>${boardCount}</td>
+                <td><a href=/board/${boardData.id} data-link>${boardData.title}</a></td>
+                <td>${boardData.writer}</td>
+                <td>${boardData.createdAt}</td>
+                <td>${boardData.hit}</td>
+                <td><a href="/board/edit-board/${boardData.id}" data-link>게시글 수정</a></td>
+                <td><a class="confirmDeletion" href="/board/delete-board/${boardData.id}" data-link>게시글 삭제</a></td>
+                </tr>
               `;
           } else {
-              return `
-                  <tr>
-                      <td>${boardData.id}</td>
-                      <td>${boardData.title}</td>
-                      <td>${boardData.writer}</td>
-                      <td>${boardData.createdAt}</td>
-                      <td>${boardData.hit}</td>
-                      <td><a href="/board/edit-board/${boardData.id}" data-link>게시글 수정</a></td>
-                      <td><a class="confirmDeletion" href="/board/delete-board/${boardData.id}" data-link>게시글 삭제</a></td>
-                  </tr>
-              `;
+            boardCount++;
+            return `
+                <tr>
+                    <td>${boardCount}</td>
+                    <td><a href=/board/${boardData.id} data-link>${boardData.title}</a></td>
+                    <td>${boardData.writer}</td>
+                    <td>${boardData.createdAt}</td>
+                    <td>${boardData.hit}</td>
+                    <td><a href="/board/edit-board/${boardData.id}" data-link>게시글 수정</a></td>
+                    <td><a class="confirmDeletion" href="/board/delete-board/${boardData.id}" data-link>게시글 삭제</a></td>
+                </tr>
+            `;
           }
       }).join("");
   }

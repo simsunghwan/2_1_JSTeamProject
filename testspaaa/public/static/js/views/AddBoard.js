@@ -8,7 +8,6 @@ export default class extends AbstractView {
   }
 
   async pageFunction() {
-    this.convertImage();
     this.addBoard();
   }
 
@@ -34,12 +33,6 @@ export default class extends AbstractView {
         <div class="form-group">
           <label for="">Content</label>
           <textarea name="content" class="form-control" cols="30" rows="10" placeholder="Content" maxlength="1000"></textarea>
-        </div>
-
-        <div class="form-group">
-          <label for="">Image</label>
-          <input type="file" class="form-control" name="image" id="img">
-          <img src="#" id="imgPreview" alt="">
         </div>
 
         <button class="btn btn-default" data-href="/board">Submit</button>
@@ -106,29 +99,6 @@ export default class extends AbstractView {
     }
     });
     console.log('addBoard 종료')
-  }
-
-  convertImage() {
-    console.log('convertImage 실행');
-    const inputImage = document.getElementById('img');
-    const preview = document.getElementById('imgPreview');
-    const self = this;
-
-    inputImage.addEventListener('input', (e) => {
-        let reader = new FileReader();
-        const selectedFile = document.getElementById("img").files[0];
-
-        reader.onload = function(e) {
-         preview.setAttribute('src', e.target.result);
-         preview.setAttribute('width', 100);
-         preview.setAttribute('height', 100); 
-
-         self.base64Data = e.target.result;
-        }
-
-      reader.readAsDataURL(selectedFile);
-    }); 
-    console.log('convertImage 종료');
   }
 }
 
