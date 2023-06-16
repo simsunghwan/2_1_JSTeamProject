@@ -1,9 +1,9 @@
 
 .content_top {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
-  border-bottom: 1px dotted red;
+  border-bottom: 2px solid black;
 }
 
 .content_top::after {
@@ -12,8 +12,23 @@
   background-color: black;
 }
 
+.content_top span,
+.content p{
+  /* text-align: center; */
+  font-size: 150%;
+}
+
 
 .title {
   display: block;
-  border-bottom: 1px dotted red;
+  border-bottom: 1px solid gray;
+}
+
+.boardContent {
+  padding: 5px;
+  border-bottom: 1px solid gray;
+}
+
+.boardContent:last-child {
+  border-bottom: 2px solid black;
 }

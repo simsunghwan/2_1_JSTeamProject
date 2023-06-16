@@ -97,7 +97,7 @@
       "imgUrl": "https://th.bing.com/th/id/OIP.B0xCvAP7BwNBXDizZQ8AngHaDh?w=310&h=166&c=7&r=0&o=5&pid=1.7"
     }
   ],
-  "users": [
+  "users":[
     {
       "id": 1,
       "name": "유대한",
@@ -106,33 +106,6 @@
       "nickName": "대한대한아",
       "birth": "2000-??-??",
       "phone": "010-1111-1111"
-    },
-    {
-      "name": "123",
-      "userId": "123",
-      "userPW": "1",
-      "nickName": "123",
-      "birth": "123",
-      "phone": "123",
-      "id": 2
-    },
-    {
-      "name": "123",
-      "userId": "123",
-      "userPW": "123",
-      "nickName": "123",
-      "birth": "123",
-      "phone": "123",
-      "id": 3
-    },
-    {
-      "name": "123",
-      "userId": "123",
-      "userPW": "123",
-      "nickName": "123",
-      "birth": "123",
-      "phone": "123",
-      "id": 4
     }
   ]
 }

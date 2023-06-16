@@ -47,56 +47,48 @@
       "writer": "asd",
       "content": "asd",
       "createdAt": "2023.06.13",
-      "hit": 5,
+      "hit": 56,
       "image": "",
       "id": 1
     },
     {
-      "title": "ㅁㄴㅇㄹ",
-      "writer": "ㅁㄴㅇㄹ",
-      "content": "ㅁㄴㅇㄹ",
+      "title": "1234",
+      "writer": "123",
+      "content": "123",
       "createdAt": "2023.06.13",
-      "hit": 1,
-      "image": "",
-      "id": 2
-    },
-    {
-      "title": "saf",
-      "writer": "fasd",
-      "content": "afds",
-      "createdAt": "2023.06.14",
-      "hit": 0,
+      "hit": 37,
       "image": "",
       "id": 3
+    },
+    {
+      "title": "ㅂㅈㄷㄱㅁㄴ",
+      "writer": "ㅇㄹㅁㄴㅇㄹㅈㅂ",
+      "content": "ㅈㄹㄷㅁㄴㅇㄹㅈㄷㅂ\nㅁㄴㄹㅈ데롬\n테스트\n응애\n앎내러ㅔㅁ더제렆ㅁㅈ\n",
+      "createdAt": "2023.06.14",
+      "hit": 246,
+      "image": "",
+      "id": 5
     }
   ],
-  "users": [
+  "user": [
+    {
+      "id": "daehan"
+    }
+  ],
+  "comments": [
     {
       "id": 1,
-      "name": "유대한",
-      "userId": "1234",
-      "userPW": "1234",
-      "nickName": "대한대한아",
-      "birth": "2000-??-??",
-      "phone": "010-1111-1111"
+      "userId": "daehan",
+      "postId": "4",
+      "content": "test comment plz",
+      "postTime": "2023.06.14 12:25:42"
     },
     {
-      "name": "1",
-      "userId": "1",
-      "userPW": "1",
-      "nickName": "1",
-      "birth": "1",
-      "phone": "1",
+      "userId": "daehan",
+      "postId": "5",
+      "content": "안녕하세요",
+      "postTime": "2023-6-14 14:11:54",
       "id": 2
-    },
-    {
-      "name": "1",
-      "userId": "1",
-      "userPW": "1",
-      "nickName": "1",
-      "birth": "1",
-      "phone": "1",
-      "id": 3
     }
   ]
 }
