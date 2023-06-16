@@ -30,7 +30,7 @@ export default class extends AbstractView {
                 <td>${boardData.writer}</td>
                 <td>${boardData.createdAt}</td>
                 <td>${boardData.hit}</td>
-                <td><a href="/board/edit-board/${boardData.id}" data-link>게시글 수정</a></td>
+                <td><a href="/edit-board/${boardData.id}" data-link>게시글 수정</a></td>
                 <td><a class="confirmDeletion" href="/board/delete-board/${boardData.id}" data-link>게시글 삭제</a></td>
                 </tr>
               `;
@@ -43,7 +43,7 @@ export default class extends AbstractView {
                     <td>${boardData.writer}</td>
                     <td>${boardData.createdAt}</td>
                     <td>${boardData.hit}</td>
-                    <td><a href="/board/edit-board/${boardData.id}" data-link>게시글 수정</a></td>
+                    <td><a href="/edit-board/${boardData.id}" data-link>게시글 수정</a></td>
                     <td><a class="confirmDeletion" href="/board/delete-board/${boardData.id}" data-link>게시글 삭제</a></td>
                 </tr>
             `;
