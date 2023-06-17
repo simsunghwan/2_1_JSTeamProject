@@ -83,7 +83,7 @@
       "writer": "ㅇㄹㅁㄴㅇㄹㅈㅂ",
       "content": "ㅈㄹㄷㅁㄴㅇㄹㅈㄷㅂ\nㅁㄴㄹㅈ데롬\n테스트\n응애\n앎내러ㅔㅁ더제렆ㅁㅈ\n",
       "createdAt": "2023.06.14",
-      "hit": 273,
+      "hit": 274,
       "image": "",
       "id": 5
     }
@@ -116,8 +116,8 @@
     },
     {
       "postId": "3",
-      "content": "ㅅㅄㅄㅄㅄㅂ",
-      "postTime": "2023-6-15 19:41:28",
+      "content": "qwerq",
+      "postTime": "2023-6-14 15:0:56",
       "id": 6
     },
     {
@@ -137,6 +137,13 @@
       "content": "qwe",
       "postTime": "2023-6-14 15:4:34",
       "id": 9
+    },
+    {
+      "userId": "daehan",
+      "postId": "5",
+      "content": "시발",
+      "postTime": "2023-6-14 22:35:9",
+      "id": 10
     }
   ],
   "profile": [
