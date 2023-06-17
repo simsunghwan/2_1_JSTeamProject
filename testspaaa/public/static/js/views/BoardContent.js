@@ -223,14 +223,14 @@ export default class extends AbstractView {
       commentList.className = "eachComment";
 
       //수정버튼 만들기
-      const modifyBtn = document.createElement('button');
-      // modifyBtn.href = `/board/${comment.postId}`;
+      const modifyBtn = document.createElement('a');
+      modifyBtn.href = `/board/edit-comment/${comment.id}`;
       modifyBtn.className = 'modifyBtn';
       const hiddenValue = comment.id; 
       modifyBtn.innerHTML = "수정";
-      modifyBtn.setAttribute('data-value', hiddenValue);
-      modifyBtn.setAttribute('type','button');
-      // modifyBtn.setAttribute('data-link','');
+      // modifyBtn.setAttribute('data-value', hiddenValue);
+      // modifyBtn.setAttribute('type','button');
+      modifyBtn.setAttribute('data-link','');
 
       
       //스페이서만들기
