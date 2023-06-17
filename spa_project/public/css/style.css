@@ -1,0 +1,19 @@
+img.pimage {
+  width: 150px;
+}
+
+a.pa {
+  display: inline-block;
+  height: 160px;
+}
+
+.row .products .p {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+img.spi{
+  width: 100%;
+}
+
+

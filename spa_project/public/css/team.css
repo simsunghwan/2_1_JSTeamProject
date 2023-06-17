@@ -1,0 +1,68 @@
+.slide-container {
+    width: 700vw;
+    height: 30%;
+    /* transform: translateX(-100vw); */
+    /* margin-left보다 부드러움 */
+    transition: all 1s;
+    display: flex;
+    align-items: center;
+
+    position: relative;
+  }
+  
+.slide-box {
+    align-items: center;
+    /* width: 100vw; */
+    width: 100vw;
+    float: left;
+} 
+
+.before .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 24px;
+  padding: 0;
+  cursor: pointer;
+}
+.before {
+    left: 30%;
+    transform: translateX(32vw);
+  }
+  
+.next {
+    left: 50%;
+    transform: translateX(35vw);
+  }
+
+img {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.table-wrapper {
+  display: table;
+  width: 100%;
+}
+
+.table-row {
+  display: table-row;
+}
+
+.table-cell {
+  display: table-cell;
+  padding: 10px;
+  text-align: center;
+}
+
+.table-cell img {
+  max-height: 200px; /* 이미지 최대 높이 설정 */
+  width: auto;
+  max-width: 100%; /* 이미지 너비 유지 */
+  display: block; /* 이미지를 블록 요소로 설정하여 상하 여백 적용 */
+  margin: 0 auto; /* 이미지 중앙 정렬 */
+}
+
