@@ -15,6 +15,7 @@
     import AdminProducts from "./views/admin/Products.js";
     import AdminAddProduct from "./views/admin/AddProduct.js";
     import AddBoard from "./views/AddBoard.js";
+    import Intro from "./views/Intro.js";
 
     const pathToRegex = path => new RegExp("^" + path.replace(/\//g, "\\/").replace(/:\w+/g, "(.+)") + "$");
 
@@ -50,7 +51,8 @@
             { path: "/admin/categories/add-category", view: AdminAddCategory },
             { path: "/admin/categories/edit-category/:id", view: AdminEditCategory },
             { path: "/admin/products", view: AdminProducts },
-            { path: "/admin/products/add-product", view: AdminAddProduct }
+            { path: "/admin/products/add-product", view: AdminAddProduct },
+            { path: "/intro", view: Intro }
         ];
 
         // Test each route for potential match
