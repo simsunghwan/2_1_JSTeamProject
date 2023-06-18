@@ -69,7 +69,7 @@ export default class Register {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
-            name: formData.get('name'),
+            username: formData.get('name'),
             email: formData.get('email'),
             userid: formData.get('userid'),
             password: formData.get('password'),

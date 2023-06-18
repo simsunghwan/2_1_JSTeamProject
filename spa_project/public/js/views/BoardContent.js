@@ -155,17 +155,23 @@ export default class BoardContent{
 
   // 댓글 추가
   addComment() {
+    let userId = localStorage.getItem("userID");
+    let userName = localStorage.getItem("username");
+
     console.log('addComment 실행');
 
     const form = document.getElementById('add-comment-form');
     form.addEventListener('submit', async (e) => {
       e.preventDefault(); // 기본 제출 동작 방지
-
+      if(userId == null || userName == null){
+        alert("로그인 후 이용해주세요.");
+        return;
+      }
       const formData = new FormData(form);
       // const board_id = document.querySelector('#board_id');
 
       console.log(JSON.stringify({
-        userId: "daehan",
+        userId: userName,
         postId: formData.get('board_id'),
         content: formData.get('comment-input'),
         postTime: this.generateTime()
@@ -177,7 +183,7 @@ export default class BoardContent{
           'Content-Type': 'application/json'
         },
         body: JSON.stringify( {
-          userId: "daehan", /* 유저 이름 받아야함 */
+          userId: userName, /* 유저 이름 받아야함 */
           postId: formData.get('board_id'),
           content: formData.get('comment-input'),
           postTime: this.generateTime()
@@ -196,6 +202,10 @@ export default class BoardContent{
 
   // 게시글 댓글 가져오기
   async getBoardComment() {
+    let userId = localStorage.getItem("userID");
+    let loginUserName = localStorage.getItem("username");
+    let userType = localStorage.getItem("userType");
+    
     console.log("getBoardComment");
     let response = await fetch("/comments");
     let data = await response.json();
@@ -236,36 +246,63 @@ export default class BoardContent{
       const commentList = document.createElement('div');  
       commentList.className = "eachComment";
 
-      //수정버튼 만들기
-      const modifyBtn = document.createElement('a');
-      modifyBtn.setAttribute('data-render', 'editComment')
-      // modifyBtn.href = `/board/edit-comment/${comment.id}`;
-      modifyBtn.className = 'modifyBtn';
-      const hiddenValue = comment.id; 
-      modifyBtn.setAttribute('data-index', hiddenValue);
-      modifyBtn.innerHTML = "수정";
-      // modifyBtn.setAttribute('data-value', hiddenValue);
-      // modifyBtn.setAttribute('type','button');
-      modifyBtn.setAttribute('data-link','');
-
-      
       //스페이서만들기
       const spacer = document.createElement('div');
       spacer.className = "spacer";
+    
+      if(userType != 'admin'){
+        if(comment.userId == loginUserName){
+          //수정버튼 만들기
+          const modifyBtn = document.createElement('a');
+          modifyBtn.setAttribute('data-render', 'editComment')     
+          modifyBtn.className = 'modifyBtn';
+          const hiddenValue = comment.id; 
+          modifyBtn.setAttribute('data-index', hiddenValue);
+          modifyBtn.innerHTML = "수정";
+          modifyBtn.setAttribute('data-link','');
 
-      //삭제버튼 만들기
-      const delBtn = document.createElement('a');
-      delBtn.setAttribute('data-render', 'boardContent');
-      delBtn.setAttribute('data-index', `${comment.postId}`);
-      // delBtn.href = `/board/${comment.postId}`;
-      delBtn.className ="deleteComment";
-      delBtn.textContent="삭제";
-      delBtn.setAttribute('data-value', hiddenValue);
-      delBtn.setAttribute('data-link','');
+          //삭제버튼 만들기
+          const delBtn = document.createElement('a');
+          delBtn.setAttribute('data-render', 'boardContent');
+          delBtn.setAttribute('data-index', `${comment.postId}`);
+          delBtn.className ="deleteComment";
+          delBtn.textContent="삭제";
+          delBtn.setAttribute('data-value', hiddenValue);
+          delBtn.setAttribute('data-link','');
+          userName.appendChild(spacer);
+          userName.appendChild(modifyBtn);
+          userName.appendChild(delBtn); 
+        }
+      } else {
+        //수정버튼 만들기
+        const modifyBtn = document.createElement('a');
+        modifyBtn.setAttribute('data-render', 'editComment')     
+        modifyBtn.className = 'modifyBtn';
+        const hiddenValue = comment.id; 
+        modifyBtn.setAttribute('data-index', hiddenValue);
+        modifyBtn.innerHTML = "수정";
+        modifyBtn.setAttribute('data-link','');
 
-      userName.appendChild(spacer);
-      userName.appendChild(modifyBtn);
-      userName.appendChild(delBtn); 
+        //삭제버튼 만들기
+        const delBtn = document.createElement('a');
+        delBtn.setAttribute('data-render', 'boardContent');
+        delBtn.setAttribute('data-index', `${comment.postId}`);
+        delBtn.className ="deleteComment";
+        delBtn.textContent="삭제";
+        delBtn.setAttribute('data-value', hiddenValue);
+        delBtn.setAttribute('data-link','');
+        userName.appendChild(spacer);
+        userName.appendChild(modifyBtn);
+        userName.appendChild(delBtn); 
+      }
+      
+
+      
+      
+
+      
+
+      
 
       commentList.appendChild(userName);
       commentList.appendChild(inputValue);
@@ -303,9 +340,9 @@ export default class BoardContent{
 
         // 응답 처리
         if (response.ok) {
-          console.log('Data submitted successfully');
+          console.log('댓글 삭제 성공');
         } else {
-          console.error('Error submitting data');
+          console.error('댓글 삭제 실패');
         }
       }
     })

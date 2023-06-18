@@ -1,5 +1,12 @@
 export default class AddBoard{
   constructor() {
+    let userId = localStorage.getItem("userID");
+    let userName = localStorage.getItem("username");
+    this.checkLogin(userId, userName);
+    if(userId === null && userName === null){
+      alert("로그인 후 이용해주세요.");
+      window.history.back();
+    }
     document.title = "AddBoard"
     this.base64Data = ""; // 공통 변수 선언
   }
@@ -9,7 +16,7 @@ export default class AddBoard{
   }
 
   async getHtml() {
-
+    let userName = localStorage.getItem("username");
     return `
       <h2 class="page-title">게시글 작성</h2>
       <a data-render="boardView" class="btn btn-primary" data-link>뒤로가기</a>
@@ -24,7 +31,7 @@ export default class AddBoard{
 
         <div class="form-group">
           <label for="">Writer</label>
-          <input name="writer" class="form-control" value="" placeholder="Writer"></input>
+          <input name="writer" class="form-control" value="${userName}" readonly></input>
         </div>
 
         <div class="form-group">
@@ -55,6 +62,12 @@ export default class AddBoard{
     return formattedDate;
   }
 
+  checkLogin(argUserId, argUserName) {
+    console.log("로그인 체크");
+    console.log(argUserId);
+    console.log(argUserName);
+  }
+
   addBoard() {
   console.log('addBoard 실행');
 
@@ -70,7 +83,6 @@ export default class AddBoard{
       content: formData.get('content'),
       createdAt: this.toStringByFormatting(new Date()),
       hit: 0,
-      image: this.base64Data // 공통 변수 사용
   }))
      
     const response = await fetch('/board', {
@@ -84,7 +96,6 @@ export default class AddBoard{
         content: formData.get('content'),
         createdAt: this.toStringByFormatting(new Date()),
         hit:  0,
-        image: this.base64Data // 공통 변수 사용
       })
     });
 

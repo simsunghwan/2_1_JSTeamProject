@@ -15,6 +15,14 @@
       "password": "1234",
       "isAdmin": 0,
       "id": 2
+    },
+    {
+      "username": "daehan",
+      "email": "a01068089833@gmail.com",
+      "userid": "daehan",
+      "password": "1234",
+      "isAdmin": 0,
+      "id": 3
     }
   ],
   "page": [
@@ -112,156 +120,52 @@
   ],
   "board": [
     {
-      "title": "as",
-      "writer": "asd",
-      "content": "asd",
-      "createdAt": "2023.06.13",
-      "hit": 44,
-      "image": "",
+      "title": "hello",
+      "writer": "John Doe",
+      "content": "myname is John Doe",
+      "createdAt": "2023.06.18",
+      "hit": 16,
       "id": 1
     },
     {
-      "title": "엄",
-      "writer": "ㅁㄴㅇㄹ",
-      "content": "asdf",
-      "createdAt": "2023.06.17",
-      "hit": 40,
-      "image": "",
+      "title": "qweqwsf",
+      "writer": "John Doe",
+      "content": "asdqwfsf",
+      "createdAt": "2023.06.18",
+      "hit": 4,
       "id": 2
     },
     {
-      "title": "1234",
-      "writer": "123",
-      "content": "asdf",
-      "createdAt": "2023.06.17",
-      "hit": 54,
-      "image": "",
+      "title": "test btn view",
+      "writer": "admin account",
+      "content": "testing",
+      "createdAt": "2023.06.18",
+      "hit": 6,
       "id": 3
     },
     {
-      "title": "ㅂㅈㄷㄱㅁㄴ",
-      "writer": "ㅇㄹㅁㄴㅇㄹㅈㅂ",
-      "content": "ㅈㄹㄷㅁㄴㅇㄹㅈㄷㅂ\nㅁㄴㄹㅈ데롬\n테스트\n응애\n앎내러ㅔㅁ더제렆ㅁㅈ\n",
-      "createdAt": "2023.06.14",
-      "hit": 284,
-      "image": "",
-      "id": 5
-    },
-    {
-      "title": "살려줘",
-      "writer": "제발",
-      "content": "젭잘",
-      "createdAt": "2023.06.17",
-      "hit": 5,
-      "image": "",
-      "id": 6
-    },
-    {
-      "title": "ㅂㅈㅂㅈㄷㅂㅈㄷ",
-      "writer": "ㄷㅂㅈㄷㅂㅈㄷㅂㅈㄷ",
-      "content": "ㅂㅈㄷㅂㅈㄷㅂㅈㄷ",
-      "createdAt": "2023.06.17",
-      "hit": 57,
-      "image": "",
-      "id": 7
-    },
-    {
-      "title": "ㅁㄴㅇㄹ",
-      "writer": "ㅂㅈㄷㄱ",
-      "content": "ㅁㄴㅇㄹ",
-      "createdAt": "2023.06.17",
-      "hit": 17,
-      "image": "",
-      "id": 8
+      "title": "게시판 완성",
+      "writer": "daehan",
+      "content": "했습니다\n로그인 상태에 따라 view 렌더링 방식 변경\n및 템플릿에 맞게 다 옮겼음",
+      "createdAt": "2023.06.18",
+      "hit": 1,
+      "id": 4
     }
   ],
   "comments": [
     {
-      "id": 1,
-      "userId": "daehan",
-      "postId": "4",
-      "content": "test comment plz",
-      "postTime": "2023.06.14 12:25:42"
+      "userId": "John Doe",
+      "postId": "1",
+      "content": "testViewBtn",
+      "postTime": "2023-6-18 18:59:36",
+      "id": 1
     },
     {
       "userId": "daehan",
-      "postId": "5",
-      "content": "ㅂㅈㄷ",
-      "postTime": "2023-6-14 14:11:54",
+      "postId": "3",
+      "content": "테스트 중",
+      "postTime": "2023-6-18 19:8:45",
       "id": 2
-    },
-    {
-      "postId": "2",
-      "content": "ㅁㄴㅇㄹ",
-      "postTime": "2023-6-14 14:39:59",
-      "id": 5
-    },
-    {
-      "postId": "1",
-      "content": "1234rqfs",
-      "postTime": "2023-6-14 15:1:4",
-      "id": 7
-    },
-    {
-      "postId": "1",
-      "content": "asdf",
-      "postTime": "2023-6-14 15:1:57",
-      "id": 8
-    },
-    {
-      "postId": "1",
-      "content": "qwe",
-      "postTime": "2023-6-14 15:4:34",
-      "id": 9
-    },
-    {
-      "userId": "daehan",
-      "postId": "5",
-      "content": "시발",
-      "postTime": "2023-6-14 22:35:9",
-      "id": 10
-    },
-    {
-      "userId": "daehan",
-      "postId": "5",
-      "content": "d?",
-      "postTime": "2023-6-17 22:44:3",
-      "id": 11
-    },
-    {
-      "userId": "daehan",
-      "postId": "3",
-      "content": "ㅁㄴㅇㄻㄴㄹ",
-      "postTime": "2023-6-17 22:59:30",
-      "id": 12
-    },
-    {
-      "userId": "daehan",
-      "postId": "5",
-      "content": "ㅁㄴㅇㄹ",
-      "postTime": "2023-6-17 23:13:22",
-      "id": 13
-    },
-    {
-      "userId": "daehan",
-      "postId": "3",
-      "content": "ㅁㄴㅇㄹ",
-      "postTime": "2023-6-17 23:15:46",
-      "id": 14
-    },
-    {
-      "userId": "daehan",
-      "postId": "3",
-      "content": "ㅈㄷㄱㅂ",
-      "postTime": "2023-6-17 23:15:48",
-      "id": 15
-    },
-    {
-      "userId": "daehan",
-      "postId": "7",
-      "content": "",
-      "postTime": "2023-6-17 23:18:44",
-      "id": 16
     }
   ],
   "product": [

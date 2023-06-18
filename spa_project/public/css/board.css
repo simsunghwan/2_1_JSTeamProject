@@ -1,4 +1,9 @@
-
+#hide {
+  display: none;
+}
+/* #show {
+  display: flex;
+} */
 .content_top {
   display: flex;
   flex-direction: row;

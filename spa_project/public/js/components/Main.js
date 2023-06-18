@@ -31,6 +31,13 @@
       return ['data-render', 'data-index'];
     }
 
+    /* 로그인 여부 확인 게시판 용 */
+    isLoggedIn() {
+      const userId = localStorage.getItem("userID");
+      const userName = localStorage.getItem("username");
+      return userId !== null && userName !== null;
+    }
+
     attributeChangedCallback(attrName, prevValue, curValue) {
       console.log('attributeChangedCallback');
       console.log(`속성명: ${attrName}, 이전 속성값: ${prevValue}, 현재 속성값: ${curValue}`);
@@ -85,9 +92,15 @@
           view = new BoardContent();
           break;
         
-        case 'addBoard':
-          view = new AddBoard();
-          break;
+          case 'addBoard':
+            if (this.isLoggedIn()) {
+              view = new AddBoard();
+            } else {
+              alert("로그인 후 이용해주세요.");
+              this.setAttribute('data-render', 'boardView');
+              return;
+            }
+            break;
         
         case 'editBoardContent':
           view = new EditBoardContent();
