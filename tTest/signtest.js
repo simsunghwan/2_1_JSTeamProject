@@ -65,8 +65,6 @@ $signUp.addEventListener('click', async (e) => {
   const userIdInput = document.querySelector("#userIdInput");
   const passwordInput = document.querySelector("#passwordInput");
   const nameInput = document.querySelector("#nameInput");
-  const nickNameInput = document.querySelector("#nickNameInput");
-  const phoneInput = document.querySelector("#phoneInput");
   const birthInput = document.querySelector("#birthInput");
   const pwCheck = document.querySelector("#pwCheck");
 

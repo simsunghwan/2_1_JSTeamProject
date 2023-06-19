@@ -43,7 +43,7 @@ export default class Register {
     <div class="sign_error" style="color:red"> </div>
     <div class="sign_success" style="color:rgb(12, 255, 69)"> </div>
 
-    <button class="btn btn-default"  data-index="">Submit</button>
+    <button class="btn btn-default" data-index="">Submit</button>
   </form>
     
     </div>
