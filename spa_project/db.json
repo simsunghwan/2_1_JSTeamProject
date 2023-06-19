@@ -124,7 +124,7 @@
       "writer": "John Doe",
       "content": "myname is John Doe",
       "createdAt": "2023.06.18",
-      "hit": 16,
+      "hit": 35,
       "id": 1
     },
     {
@@ -132,7 +132,7 @@
       "writer": "John Doe",
       "content": "asdqwfsf",
       "createdAt": "2023.06.18",
-      "hit": 4,
+      "hit": 6,
       "id": 2
     },
     {
@@ -140,7 +140,7 @@
       "writer": "admin account",
       "content": "testing",
       "createdAt": "2023.06.18",
-      "hit": 6,
+      "hit": 8,
       "id": 3
     },
     {
@@ -148,7 +148,7 @@
       "writer": "daehan",
       "content": "했습니다\n로그인 상태에 따라 view 렌더링 방식 변경\n및 템플릿에 맞게 다 옮겼음",
       "createdAt": "2023.06.18",
-      "hit": 1,
+      "hit": 12,
       "id": 4
     }
   ],
@@ -166,6 +166,34 @@
       "content": "테스트 중",
       "postTime": "2023-6-18 19:8:45",
       "id": 2
+    },
+    {
+      "userId": "daehan",
+      "postId": "2",
+      "content": "없다고",
+      "postTime": "2023-6-19 9:9:26",
+      "id": 3
+    },
+    {
+      "userId": "daehan",
+      "postId": "1",
+      "content": "ㅁㄴㅇㄹ",
+      "postTime": "2023-6-19 9:9:45",
+      "id": 4
+    },
+    {
+      "userId": "daehan",
+      "postId": "5",
+      "content": "준",
+      "postTime": "2023-6-19 9:10:48",
+      "id": 6
+    },
+    {
+      "userId": "daehan",
+      "postId": "5",
+      "content": "식",
+      "postTime": "2023-6-19 9:10:51",
+      "id": 7
     }
   ],
   "product": [
