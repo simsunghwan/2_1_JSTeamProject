@@ -26,7 +26,7 @@ export default class Login {
           <input type="password" name="password" class="form-control" placeholder="Password">
         </div>
         <div class="error_message" style="color:red"> </div>
-        <button class="btn btn-default data-render="" data-index="">Submit</button>
+        <button class="btn btn-default data-index="">Submit</button>
       </form>
         
     </div>

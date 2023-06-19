@@ -11,6 +11,8 @@
   import EditComment from '../views/EditComment.js'
   import AddBoard from '../views/AddBoard.js';
   import Team from '../views/Team.js';
+  import DeleteAdmin from '../views/admin/deleteAdmin.js';
+  
 
 
   class Main extends HTMLElement {
@@ -92,15 +94,15 @@
           view = new BoardContent();
           break;
         
-          case 'addBoard':
-            if (this.isLoggedIn()) {
-              view = new AddBoard();
-            } else {
-              alert("로그인 후 이용해주세요.");
-              this.setAttribute('data-render', 'boardView');
-              return;
-            }
-            break;
+        case 'addBoard':
+          if (this.isLoggedIn()) {
+            view = new AddBoard();
+          } else {
+            alert("로그인 후 이용해주세요.");
+            this.setAttribute('data-render', 'boardView');
+            return;
+          }
+          break;
         
         case 'editBoardContent':
           view = new EditBoardContent();
@@ -112,6 +114,9 @@
 
         case 'team':
           view = new Team();
+          break;
+        case 'deleteAdmin':
+          view = new DeleteAdmin();
           break;
 
       }

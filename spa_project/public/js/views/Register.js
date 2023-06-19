@@ -40,8 +40,10 @@ export default class Register {
       <label>Confirm Password</label>
       <input type="password" name="confirmPassword" class="form-control" placeholder="Confirm Password">
     </div>
+    <div class="sign_error" style="color:red"> </div>
+    <div class="sign_success" style="color:rgb(12, 255, 69)"> </div>
 
-    <button class="btn btn-default" data-render="" data-index="">Submit</button>
+    <button class="btn btn-default"  data-index="">Submit</button>
   </form>
     
     </div>
@@ -61,10 +63,53 @@ export default class Register {
       // 각 입력별 양식 모두 체크, 아이디 중복 체크, 비밀번호 동일 여부 체크 등
 
       // 하나라도 false 라면 에러, 모두 true 일 경우에만 통과
-  
+      const $sign_error = document.querySelector(".sign_error");  
+      $sign_error.textContent = "";
+
+
+      if (formData.get('name') === "") {
+        $sign_error.textContent = "Name이 비어있습니다. 모든 정보를 입력해주세요.";
+        return;
+      }
+      if (formData.get('email') === "") {
+        $sign_error.textContent = "Email이 비어있습니다. 모든 정보를 입력해주세요.";
+        return;
+      }
+      if (formData.get('userid') === "") {
+        $sign_error.textContent = "UserID가 비어있습니다. 모든 정보를 입력해주세요.";
+        return;
+      }
+      if (formData.get('password') === "") {
+        $sign_error.textContent = "Password가 비어있습니다. 모든 정보를 입력해주세요.";
+        return;
+      }
+      if (formData.get('confirmPassword') === "") {
+        $sign_error.textContent = "Confirm Password가 비어있습니다. 모든 정보를 입력해주세요.";
+        return;
+      }
+      if (formData.get('password') !== formData.get('confirmPassword')) {
+        $sign_error.textContent = "Password가 일치하지 않습니다.";
+        return;
+      }
+
+      
+      const response = await fetch("/user");
+      const data = await response.json();
+
+      const signupUser = data.find(user => 
+        user.userid === formData.get('userid')
+      );
+
+
+      if (signupUser) {
+        $sign_error.textContent = "UserID가 중복됩니다.";
+        return;
+      }
+
+
       //////////////////////////////////////////////////////////
 
-      if (true) { // 검증 여부 true
+      $sign_error.textContent = "";
         await fetch('/user', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -79,7 +124,11 @@ export default class Register {
 
         alert('가입 완료!');
         mainElement.setAttribute('data-render', 'login');
-      }
+          
+      
+      
+      
+      
     });
 
   }
