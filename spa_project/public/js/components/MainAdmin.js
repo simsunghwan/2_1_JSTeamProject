@@ -8,6 +8,9 @@
   import AdminProducts from '../views/admin/AdminProducts.js';
   import AddProduct from '../views/admin/AddProduct.js';
   import EditProduct from '../views/admin/EditProduct.js';
+  import AddTeam from '../views/admin/AddTeam.js';
+  import EditTeam from '../views/admin/EditTeam.js';
+  import AdminTeam from '../views/admin/AdminTeam.js';
 
 
   class MainAdmin extends HTMLElement {
@@ -85,6 +88,19 @@
         case 'edit_product':
           view = new EditProduct();
           break; 
+
+        case 'add_team':
+          view = new AddTeam();
+          break;
+        
+        case 'edit_team':
+          console.log("comple");
+          view = new EditTeam();
+          break;
+        
+        case 'admin_team':
+          view = new AdminTeam();
+          break
       }
 
       console.log("view: ", view);

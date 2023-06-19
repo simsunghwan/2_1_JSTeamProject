@@ -48,7 +48,6 @@ async function checkUser(id, pw) {
     // console.log(idData);
     
     for (const user of idData) {
-
         if (user.userId === id){
             flag = true;
             break;

@@ -25,7 +25,7 @@ export default class Login {
           <label>Password</label>
           <input type="password" name="password" class="form-control" placeholder="Password">
         </div>
-
+        <div class="error_message" style="color:red"> </div>
         <button class="btn btn-default data-render="" data-index="">Submit</button>
       </form>
         
@@ -60,10 +60,15 @@ export default class Login {
         // 비밀번호와 같은 개인 정보를 평문으로 비교하는 것은 보안에 매우 취약함.
         // 비밀번호 암호화 필요.
 
+        const $errorMessage = document.querySelector('.error_message');
+        $errorMessage.textContent = "";
+
         const loggedInUser = data.find(user => 
           user.userid === formData.get('userid') &&
           user.password === formData.get('password') 
         );
+
+
 
         if (loggedInUser) {
           if (loggedInUser.isAdmin === 1) {
@@ -82,7 +87,16 @@ export default class Login {
           
         } 
         else {
+          if(formData.get('userid') === "") {
+            $errorMessage.textContent = '아이디를 입력해주세요';
+            return;
+          }
+          if(formData.get('password') === "") {
+              $errorMessage.textContent = '비밀번호를 입력해주세요';
+              return;
+          }
           // 로그인 실패
+          $errorMessage.textContent = '아이디(로그인 전용 아이디) 또는 비밀번호를 잘못 입력했습니다.';
           console.log("로그인 실패");
         }      
       });

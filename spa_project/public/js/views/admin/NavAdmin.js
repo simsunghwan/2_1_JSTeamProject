@@ -17,6 +17,7 @@ export default class NavAdmin {
             <li><a class="nav__link" data-render="admin_categories" data-index="" data-link>카테고리 목록 확인</a></li>
               <li><a class="nav__link" data-render="admin_products" data-index="" data-link>상품 목록 확인</a></li>
               <li><a class="nav__link" data-render="admin_board" data-index="" data-link>게시판 목록 확인</a></li>
+              <li><a class="nav__link" data-render="admin_team" data-index="" data-link>조원 목록 확인</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
               <li><a class="nav__link" href="/" data-render="" data-index="" data-linq>Back to User Area</a></li>
