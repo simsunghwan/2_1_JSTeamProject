@@ -124,11 +124,7 @@
       "writer": "John Doe",
       "content": "myname is John Doe",
       "createdAt": "2023.06.18",
-<<<<<<< HEAD
-      "hit": 35,
-=======
-      "hit": 17,
->>>>>>> 098a5f5b5632797801ae2beb13279174c979900f
+      "hit": 22,
       "id": 1
     },
     {
@@ -136,7 +132,7 @@
       "writer": "John Doe",
       "content": "asdqwfsf",
       "createdAt": "2023.06.18",
-      "hit": 6,
+      "hit": 14,
       "id": 2
     },
     {
@@ -144,7 +140,7 @@
       "writer": "admin account",
       "content": "testing",
       "createdAt": "2023.06.18",
-      "hit": 8,
+      "hit": 9,
       "id": 3
     },
     {
@@ -152,7 +148,7 @@
       "writer": "daehan",
       "content": "했습니다\n로그인 상태에 따라 view 렌더링 방식 변경\n및 템플릿에 맞게 다 옮겼음",
       "createdAt": "2023.06.18",
-      "hit": 12,
+      "hit": 14,
       "id": 4
     }
   ],
@@ -181,8 +177,8 @@
     {
       "userId": "daehan",
       "postId": "1",
-      "content": "ㅁㄴㅇㄹ",
-      "postTime": "2023-6-19 9:9:45",
+      "content": "asdf",
+      "postTime": "2023-6-19 23:8:50",
       "id": 4
     },
     {
