@@ -30,12 +30,12 @@
 }
 .before {
     left: 30%;
-    transform: translateX(32vw);
+    transform: translateX(490px);
   }
   
 .next {
     left: 50%;
-    transform: translateX(35vw);
+    transform: translateX(510px);
   }
 
 img {
@@ -66,3 +66,6 @@ img {
   margin: 0 auto; /* 이미지 중앙 정렬 */
 }
 
+.psize {
+  width: 800px;
+}

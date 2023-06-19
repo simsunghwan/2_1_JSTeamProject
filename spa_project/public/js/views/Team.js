@@ -19,12 +19,17 @@ export default class Team {
     const dataProduct = await resProduct.json(); 
 
     const productRows = dataProduct.map(profile => {
+
+
+
       return `
       <div class="slide-box">
-        <table class="table table-dark table-striped table-wrapper">
-          <tbody class="table-row table-cell">
+        <table class="table table-striped table-wrapper">
+          <tbody class="table-row table-cell table-dark">
             <tr>
-              <td rowspan="5" class="text-center"><img alt="non" src="${profile.imgUrl}" ></td>
+              <td rowspan="4" class="text-center">
+                <img alt="non" src="${profile.imgUrl}" >
+              </td>
               <td>이름 :</td><td>${profile.name}</td>
             </tr>
             <tr>
@@ -37,7 +42,12 @@ export default class Team {
               <td>JLPT :</td><td>${profile.level}</td>
             </tr>
             <tr>
-              <td>각오 :</td><td>${profile.minded}</td>
+              <td colspan="3">앞으로의 다짐
+              <hr><p class="psize">
+              ${profile.minded}
+              </p>
+              </td>
+              
             </tr>
           </tbody>
         </table>
