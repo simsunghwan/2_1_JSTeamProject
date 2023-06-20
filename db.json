@@ -64,7 +64,7 @@
   "profile": [
     {
       "name": "심성환",
-      "class": "3WD",
+      "class": "2WD",
       "minded": "잘갔다 오겠습니다...",
       "level": "N2",
       "age": "24",
@@ -140,7 +140,7 @@
       "writer": "John Doe",
       "content": "myname is John Doe",
       "createdAt": "2023.06.18",
-      "hit": 22,
+      "hit": 24,
       "id": 1
     },
     {
