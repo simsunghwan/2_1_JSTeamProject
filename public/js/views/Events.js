@@ -24,6 +24,9 @@ export default class Events {
         <a class="" data-link>
           <img class="" src="${event.image}" data-render="" data-index="" style="width: 100%; height: 180px; background-color: rgba(255, 255, 128, .5); border: 3px solid black;" data-link>
         </a>
+        <br>
+        <a style=" display: flex;justify-content: center;font-size:20px" class="vd" data-render="eventContent" data-index="${event.id}" data-link>더보기</a>
+        <br>
       </div>
       `
     })

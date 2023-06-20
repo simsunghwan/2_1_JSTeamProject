@@ -13,7 +13,7 @@
   import Team from '../views/Team.js';
   import DeleteAdmin from '../views/admin/deleteAdmin.js';
   import CorrectionUser from '../views/CorrectionUser.js';
-
+  import EventContent from '../views/eventContent.js'
 
   class Main extends HTMLElement {
     constructor() {
@@ -115,9 +115,15 @@
         case 'team':
           view = new Team();
           break;
+          
         case 'deleteAdmin':
           view = new DeleteAdmin();
           break;
+
+        case 'eventContent':
+          view = new EventContent();
+          break;
+
         case 'correctionUser':
           view = new CorrectionUser(); 
       }

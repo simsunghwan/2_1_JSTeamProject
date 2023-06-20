@@ -11,7 +11,9 @@
   import AddTeam from '../views/admin/AddTeam.js';
   import EditTeam from '../views/admin/EditTeam.js';
   import AdminTeam from '../views/admin/AdminTeam.js';
-
+  import AddEvent from '../views/admin/AddEvent.js';
+  import EditEvent from '../views/admin/EditEvent.js';
+  import AdminEvent from '../views/admin/AdminEvent.js';
 
   class MainAdmin extends HTMLElement {
     constructor() {
@@ -101,6 +103,19 @@
         case 'admin_team':
           view = new AdminTeam();
           break
+
+        case 'add_event':
+          view = new AddEvent();
+          break;
+
+        case 'edit_event':
+          view = new EditEvent();
+          break;
+
+        case 'admin_event':
+          view = new AdminEvent();
+          break;
+
       }
 
       console.log("view: ", view);
