@@ -12,7 +12,7 @@ export default class DeleteAdmin{
     return `
       
     <div class='container'>
-      <h1>Login</h1>
+      <h1>회원 강퇴</h1>
       <form id="deleteAdmin-form" method="post">
         <div class="form-group">
           <label>삭제할 아이디:</label>
