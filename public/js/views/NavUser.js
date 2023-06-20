@@ -19,6 +19,7 @@ export default class NavUser {
         <li><a class="nav__link" id="btn-logout" data-render="home" data-index="" data-log="" data-link>Hi! ${loginUsername} (로그아웃)</a></li>
         <li><a class="nav__link" href="/admin" data-render="" data-index="" data-linq>Go to Admin Area</a></li>
         <li><a class="nav__link" id="btn-deleteAdmin" data-render="deleteAdmin" data-index="" data-link>회원강퇴</a></li>
+        <li><a class="nav__link" id="btn-CorrectionUser" data-render="correctionUser" data-index="" data-log="" data-link>회원수정</a></li>
         `
       }
       else {
@@ -27,7 +28,7 @@ export default class NavUser {
         <li><a class="nav__link" data-render="cart" data-index="" data-link>My Cart(숫자 구현 필요)</a></li>
         <li><a class="nav__link" id="btn-logout" data-render="home" data-index="" data-log="" data-link>Hi! ${loginUsername} (로그아웃)</a></li>
         <li><a class="nav__link" id="btn-deleteUser" data-render="home" data-index="" data-log="" data-link>회원탈퇴</a></li>
-        <li><a class="nav__link" id="btn-deleteUser" data-render="home" data-index="" data-log="" data-link>회원탈퇴</a></li>
+        <li><a class="nav__link" id="btn-CorrectionUser" data-render="correctionUser" data-index="" data-log="" data-link>회원수정</a></li>
         `
       }
 
