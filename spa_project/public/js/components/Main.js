@@ -12,7 +12,7 @@
   import AddBoard from '../views/AddBoard.js';
   import Team from '../views/Team.js';
   import DeleteAdmin from '../views/admin/deleteAdmin.js';
-  
+  import CorrectionUser from '../views/CorrectionUser.js';
 
 
   class Main extends HTMLElement {
@@ -118,7 +118,8 @@
         case 'deleteAdmin':
           view = new DeleteAdmin();
           break;
-
+        case 'correctionUser':
+          view = new CorrectionUser(); 
       }
 
       console.log("view: ", view);

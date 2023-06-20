@@ -27,6 +27,7 @@ export default class NavUser {
         <li><a class="nav__link" data-render="cart" data-index="" data-link>My Cart(숫자 구현 필요)</a></li>
         <li><a class="nav__link" id="btn-logout" data-render="home" data-index="" data-log="" data-link>Hi! ${loginUsername} (로그아웃)</a></li>
         <li><a class="nav__link" id="btn-deleteUser" data-render="home" data-index="" data-log="" data-link>회원탈퇴</a></li>
+        <li><a class="nav__link" id="btn-deleteUser" data-render="home" data-index="" data-log="" data-link>회원탈퇴</a></li>
         `
       }
 
