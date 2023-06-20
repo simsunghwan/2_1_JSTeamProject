@@ -41,14 +41,6 @@
       "id": 5
     },
     {
-      "username": "1234",
-      "email": "tohka113@naver.com",
-      "userid": "1234",
-      "password": "1234",
-      "isAdmin": 0,
-      "id": 6
-    },
-    {
       "username": "하이",
       "email": "tohka113@naver.com",
       "userid": null,

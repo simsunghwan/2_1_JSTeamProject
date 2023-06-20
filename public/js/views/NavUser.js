@@ -66,7 +66,7 @@ export default class NavUser {
   deleteUser() {
     const userID = localStorage.getItem("userID");
     const userType = localStorage.getItem("userType");
-    if (userType === 0) {
+    if (userType) {
       const deleteUserBtn = document.getElementById('btn-deleteUser');
       deleteUserBtn.addEventListener('click', async e => {
         const checkDelete = confirm('탈퇴 하시겠습니까?');
