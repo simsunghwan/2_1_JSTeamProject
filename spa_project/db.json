@@ -39,14 +39,6 @@
       "password": "12345",
       "isAdmin": 0,
       "id": 5
-    },
-    {
-      "username": "지훈",
-      "email": "tohka113@naver.com",
-      "userid": "1234",
-      "password": "123",
-      "isAdmin": 0,
-      "id": 6
     }
   ],
   "page": [
